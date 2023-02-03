@@ -56,7 +56,7 @@ O site terá por objetivo mostrar os diversos produtos da loja, assim como verif
 –> View (subpasta de loja)
 
 
-## *TECNOLOGIAS UTILIZADAS*
+## *Tecnologias Utilizadas*
 
 * HTML5
 * CSS3
