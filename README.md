@@ -47,13 +47,17 @@ O site terá por objetivo mostrar os diversos produtos da loja, assim como verif
 
 -> Loja (pasta principal)
 
-–> Controller (subpasta de loja)
+&emsp;&emsp; –> Controllers
 
-–> Model (subpasta de loja)
+&emsp;&emsp; –> Model
 
-–> Persistence (subpasta de loja)
+&emsp;&emsp; –> Persistence
 
-–> View (subpasta de loja)
+&emsp;&emsp; –> View
+
+&emsp;&emsp; –> Routes
+
+&emsp;&emsp; –> Services
 
 
 ## *Tecnologias Utilizadas:*
