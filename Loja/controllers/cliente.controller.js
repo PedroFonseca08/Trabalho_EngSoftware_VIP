@@ -46,4 +46,18 @@ async function deleteCliente(req, res){
     }
 }
 
-export default{getAllClientes, getCliente, createCliente, deleteCliente}
+async function fazerLogin(req, res){
+
+    const nome = req.body.nome;
+    const senha = req.body.senha;
+    console.log(nome + " " + senha);
+
+    if((!nome)||(!senha)) {
+        res.send("Nome, email ou senha inválidos");
+    }
+    else {
+        res.send(await clienteService.fazerLogin(nome, senha));
+    }
+}
+
+export default{getAllClientes, getCliente, createCliente, deleteCliente, fazerLogin}
