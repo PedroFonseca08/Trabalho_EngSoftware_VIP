@@ -1,0 +1,64 @@
+body{
+    position: absolute;
+    background-image: url(_imagens/fundo.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+hgroup h2{
+    color:#053017
+}
+
+section#right form#login{
+    display: block;
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    padding: 30px 20px 0px 20px;
+    top: 120px;  
+    background-color: rgba(85, 85, 85, 0.2);  
+}
+
+section#left form#cadastro{
+    display: block; 
+    position: absolute;
+    left: 700px;
+    width: 250px;
+    padding: 30px 20px 50px 20px;
+    top: 120px;
+    background-color: rgba(85, 85, 85, 0.2);  
+}
+
+header#cabecalho{
+    position: absolute;
+    background-color: #053017;
+}
+
+header#cabecalho h1{
+    position: absolute;
+    left: 50px;
+    padding: 5px 0px 5px 0px;
+}
+
+header#cabecalho img#icone{
+    position:absolute;
+    top: 10px;
+    width: 50px;
+    left: 150px;
+}
+
+form input{
+    background-color: #77937E;
+}
+
+form button#botao{
+    background-color: #104524;
+    color:aliceblue;
+    padding: 10px;
+    margin: 30px auto 10px 100px;
+}
+
+a{
+    color:rgb(3, 58, 31);
+}
