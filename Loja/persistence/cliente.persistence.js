@@ -6,7 +6,7 @@ async function getAllClientes(){
     try {
         const consulta = await conn.query('SELECT * FROM cliente');
         console.log("getAllClientes /n"+ consulta.rows);
-       return consulta.rows;
+        return consulta.rows;
     } catch (error) {
         console.log(error);
     }

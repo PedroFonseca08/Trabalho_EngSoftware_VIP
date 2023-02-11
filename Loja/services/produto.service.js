@@ -30,7 +30,7 @@ async function deleteProduto(nome){
 }
 
 async function updateProduto(id, novoNome, descricao, preco, qtd){
-    const produto = await getProduto(nome);
+    const produto = await getProduto(novoNome);
     if(produto.length > 0){
         return await await produtoPersistence.updateProduto(id, novoNome, descricao, preco, qtd);
     }
