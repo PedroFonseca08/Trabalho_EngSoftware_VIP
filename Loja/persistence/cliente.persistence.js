@@ -65,4 +65,22 @@ async function deleteCliente(nome){
     }
 }
 
-export default{getAllClientes, getCliente, createCliente, deleteCliente}
+async function fazerLogin(nome, senha){
+
+    const conn = await BD.conectar();
+    try {
+        const consulta = await conn.query("SELECT * FROM cliente WHERE nome=$1 AND senha=$2", [nome, senha]);
+        console.log("fazerLogin /n"+ consulta.rows);
+        return consulta.rows;
+    }
+    catch (err){
+        console.log(err);
+    }
+    finally {
+        // Liberar (devolver) a conexão.
+        location.replace("http://youtube.com");
+        conn.release();
+    }
+}
+
+export default{getAllClientes, getCliente, createCliente, deleteCliente, fazerLogin}

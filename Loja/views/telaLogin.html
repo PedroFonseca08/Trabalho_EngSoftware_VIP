@@ -12,24 +12,21 @@
         </header>
         <hgroup>
             <section id="right">
-                <form id="login"action="/action_page.php">
-                    <h2>Já Sou Cliente</h2>
-                    <label for="e-mail">E-mail:</label><br>
-                    <input type="text" id="e-mail" name="e-mail" value="John"><br>
+                <form id="login" action="http://localhost:3000/cliente/login" method="post">
+                    <h2>Fazer Login</h2>
+                    <label for="nome">Nome de Usuário:</label><br>
+                    <input type="text" id="nome" name="nome"><br>
                     <label for="senha">Senha:</label><br>
-                    <input type="text" id="senha" name="senha" value="Doe"><br><br>               
-                    <button id="botao" type="submit"> ACESSAR CONTA </button><br><br><br>
-                    <a href = "https://www.w3schools.com/html/html_links.asp"> Esqueci minha senha</a><br><br> 
-                </form> 
+                    <input type="password" id="senha" name="senha"><br><br>
+                    <button id="botao" type="submit"> Acessar Conta </button><br><br><br>
+                </form>
             </section>  
             <section id="left">  
-                <form id="cadastro" action="/action_page.php">
+                <form id="cadastro" action="./telaCadastro.html">
                     <h2>&nbsp &nbsp Ainda Não Sou <br> &nbsp &nbsp &nbsp &nbsp Cliente</h2>
                     <button id="botao" type="submit"> CADASTRAR </button>
                 </form>
             </section>
         </hgroup>
-            
-
     </body>
 </html>
