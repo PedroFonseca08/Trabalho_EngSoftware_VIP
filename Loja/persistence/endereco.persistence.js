@@ -20,7 +20,7 @@ async function createEndereco(idcliente, logradouro, numero){
 
     const conn = await BD.conectar();
     try {
-        const insere = await conn.query("INSERT INTO endereco VALUES ($1,$2,$3) RETURNING * ", [idcliente, logradouro, numero]);
+        const insere = await conn.query("INSERT INTO endereco VALUES (DEFAULT,$1,$2,$3) RETURNING * ", [idcliente, logradouro, numero]);
         console.log("createClient !!!");
         return insere.rows;
     }
