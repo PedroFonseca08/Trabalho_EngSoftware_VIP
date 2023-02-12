@@ -78,7 +78,6 @@ async function fazerLogin(nome, senha){
     }
     finally {
         // Liberar (devolver) a conexão.
-        location.replace("http://youtube.com");
         conn.release();
     }
 }
