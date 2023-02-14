@@ -22,12 +22,6 @@ header#cabecalho img#mulherCompras{
     left: 9.5em;
 }
 
-/*header#cabecalho img#busca{
-    position:absolute;
-    top: 1.5em;
-    left: 45em;
-}*/
-
 header#cabecalho form{
     position:absolute;
     top: 1em;
