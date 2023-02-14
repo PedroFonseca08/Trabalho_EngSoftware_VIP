@@ -1,0 +1,58 @@
+body{
+    position: absolute;
+    background-image: url(_imagens/fundo.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header#cabecalho{
+    position: absolute;
+    background-color: #053017;
+}
+
+header#cabecalho h1{
+    position: absolute;
+    left: 50px;
+    padding: 5px 0px 5px 0px;
+}
+
+header#cabecalho img#mulherCompras{
+    position:absolute;
+    top: 1.3em;
+    left: 9.5em;
+}
+
+header#cabecalho img#busca{
+    position:absolute;
+    top: 1.5em;
+    left: 45em;
+}
+
+header#cabecalho img#carrinho{
+    position:absolute;
+    top: 1.5em;
+    left: 70em;
+}
+
+header#cabecalho img#meuPerfil{
+    position:absolute;
+    top: 1.5em;
+    margin-left: 75em;
+}
+
+aside#lateral{
+    display: block;
+    width: 250%;
+    float: left;
+    background-color: #75977E;
+    padding: 27%;
+    margin-top: 70%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+aside#lateral li{
+    font-size: 15; 
+    padding: 1em 0.2em 1em 0.2em;
+}
