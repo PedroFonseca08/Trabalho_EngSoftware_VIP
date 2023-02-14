@@ -7,26 +7,46 @@ body{
 }
 
 header#cabecalho{
+    display: block;
     position: absolute;
     background-color: #053017;
 }
 
-header#cabecalho h1{
+header h1{
     position: absolute;
-    left: 50px;
-    padding: 5px 0px 5px 0px;
+    margin-left: 1.5em;
 }
-
 header#cabecalho img#mulherCompras{
     position:absolute;
     top: 1.3em;
     left: 9.5em;
 }
 
-header#cabecalho img#busca{
+/*header#cabecalho img#busca{
     position:absolute;
     top: 1.5em;
     left: 45em;
+}*/
+
+header#cabecalho form{
+    position:absolute;
+    top: 1em;
+    left: 30em;
+    width: 35em;
+}
+
+label{
+    display: block;
+}
+
+input, button{
+    padding: 5px;
+    background-color: #164924;
+}
+
+input{
+    background-color: #75977E;
+    width: 50%;
 }
 
 header#cabecalho img#carrinho{
@@ -40,6 +60,7 @@ header#cabecalho img#meuPerfil{
     top: 1.5em;
     margin-left: 75em;
 }
+
 
 aside#lateral{
     display: block;
