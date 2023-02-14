@@ -6,7 +6,7 @@ async function getAllClientes(){
     try {
         const consulta = await conn.query('SELECT * FROM cliente');
         console.log("getAllClientes /n"+ consulta.rows);
-       return consulta.rows;
+        return consulta.rows;
     } catch (error) {
         console.log(error);
     }
@@ -65,4 +65,21 @@ async function deleteCliente(nome){
     }
 }
 
-export default{getAllClientes, getCliente, createCliente, deleteCliente}
+async function fazerLogin(nome, senha){
+
+    const conn = await BD.conectar();
+    try {
+        const consulta = await conn.query("SELECT * FROM cliente WHERE nome=$1 AND senha=$2", [nome, senha]);
+        console.log("fazerLogin /n"+ consulta.rows);
+        return consulta.rows;
+    }
+    catch (err){
+        console.log(err);
+    }
+    finally {
+        // Liberar (devolver) a conexão.
+        conn.release();
+    }
+}
+
+export default{getAllClientes, getCliente, createCliente, deleteCliente, fazerLogin}

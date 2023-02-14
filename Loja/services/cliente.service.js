@@ -24,9 +24,13 @@ async function deleteCliente(nome){
     if(cliente.length > 0){
         return await clientePersistence.deleteCliente(nome);
     }
-    else{
+    else {
         return "Cliente não cadastrado";
     }
 }
 
-export default{getAllClientes, getCliente, createCliente, deleteCliente}
+async function fazerLogin(nome, senha){
+    return await clientePersistence.fazerLogin(nome, senha);
+}
+
+export default{getAllClientes, getCliente, createCliente, deleteCliente, fazerLogin}
