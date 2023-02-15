@@ -53,10 +53,10 @@ async function fazerLogin(req, res){
     console.log(nome + " " + senha);
 
     if((!nome)||(!senha)) {
-        res.send("Nome, email ou senha inválidos");
+        return false;
     }
     else {
-        res.send(await clienteService.fazerLogin(nome, senha));
+       return await clienteService.fazerLogin(nome, senha)
     }
 }
 

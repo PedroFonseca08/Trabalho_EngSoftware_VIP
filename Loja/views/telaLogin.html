@@ -5,6 +5,18 @@
         <link rel="stylesheet" href="./telaLogin.css">
     </head>
     <body>
+        <script type="text/javascript" src="../controllers/cliente.controller.js">
+            function autenticar(nome, senha){
+                if(fazerlogin(nome, senha) == true){
+                    console.log("entro no if")
+                }
+                else{
+                    console.log("entrou no else")
+                }
+            }
+            console.log("entro aq")
+            autenticar(nome, senha);
+        </script>
         <!--img id="fundo" src="_imagens/fundo.jpeg"-->
         <header id="cabecalho">
             <h1>NJACK</h1>
@@ -12,7 +24,7 @@
         </header>
         <hgroup>
             <section id="right">
-                <form id="login" action="http://localhost:3000/cliente/login" method="post">
+                <form id="login" onsubmit="autenticar(nome, senha)">
                     <h2>Fazer Login</h2>
                     <label for="nome">Nome de Usuário:</label><br>
                     <input type="text" id="nome" name="nome"><br>

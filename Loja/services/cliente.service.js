@@ -30,7 +30,11 @@ async function deleteCliente(nome){
 }
 
 async function fazerLogin(nome, senha){
-    return await clientePersistence.fazerLogin(nome, senha);
+    const cliente = await clientePersistence.fazerLogin(nome, senha);
+    if(cliente.length > 0){
+        
+        return true;
+    }
 }
 
 export default{getAllClientes, getCliente, createCliente, deleteCliente, fazerLogin}
