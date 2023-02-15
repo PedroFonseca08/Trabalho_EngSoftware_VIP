@@ -5,18 +5,6 @@
         <link rel="stylesheet" href="./telaLogin.css">
     </head>
     <body>
-        <script type="text/javascript" src="../controllers/cliente.controller.js">
-            function autenticar(nome, senha){
-                if(fazerlogin(nome, senha) == true){
-                    console.log("entro no if")
-                }
-                else{
-                    console.log("entrou no else")
-                }
-            }
-            console.log("entro aq")
-            autenticar(nome, senha);
-        </script>
         <!--img id="fundo" src="_imagens/fundo.jpeg"-->
         <header id="cabecalho"> 
             <h1>NJACK</h1>
@@ -24,14 +12,28 @@
         </header>
         <hgroup>
             <section id="right">
-                <form id="login" onsubmit="autenticar(nome, senha)">
+                <form id="login">
                     <h2>Fazer Login</h2>
                     <label for="nome">Nome de Usuário:</label><br>
                     <input type="text" id="nome" name="nome"><br>
                     <label for="senha">Senha:</label><br>
                     <input type="password" id="senha" name="senha"><br><br>
-                    <button id="botao" type="submit"> Acessar Conta </button><br><br><br>
+                    <button id="botao" type="submit" onclick="autenticar()"> Acessar Conta </button><br><br><br>
                 </form>
+                <script type="text/javascript" src="../controllers/cliente.controller.js">
+                    function autenticar(){
+                        const nome = req.body.nome;
+                        const senha = req.body.senha;
+                        if(fazerlogin(nome, senha) == true){
+                            console.log("entro no if")
+                        }
+                        else{
+                            console.log("entrou no else")
+                        }
+                    }
+                    console.log("entro aq")
+                    autenticar(nome, senha);
+                </script>
             </section>  
             <section id="left">  
                 <form id="cadastro" action="./telaCadastro.html">
