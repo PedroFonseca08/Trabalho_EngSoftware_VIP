@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NJACK</title>
+        <link rel="stylesheet" href="./telaCadastrarProduto.css">
+    </head>
+    <body>
+        <header id="cabecalho"> 
+            <h1>NJACK</h1>
+            <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+            <img id="carrinho" src="_imagens/carrinho.png" height="40px">
+            <img id="meuPerfil" src="_imagens/meuPerfil.png" height="40px">
+            <img id="gerenciamento" src="_imagens/gerenciamento.png" height="30px">
+            <form action=" " method="post">
+                <label for="busca"></label>
+                <input type="search" id="busca" name="busca">
+                <button type="submit"><img id="busca" src="_imagens/busca.png" height="20px"></button>
+              </form>
+        </header>
+
+        <section id="principal">
+            <form id="cadastrar" action="">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome"><br>
+                <label for="descricao">Descrição:</label><br>
+                <input type="text" id="descricao" name="descricao"><br>
+                <label for="foto">Selecione uma imagem:</label><br>
+                <input type="file" id="foto" name="foto"><br>
+                <label for="qtdProduto">Quantidade Produtos:</label><br>
+                <input type="text" id="qtdProduto" name="qtdProduto">
+                <label for="preco">Preço:</label><br>
+                <input type="text" id="preco" name="preco"><br>
+                <input type="submit" id="botao" value="CADASTRAR">
+                </form>
+
+                <form id="retornar" action="./telaPrincipalAdmin.html">
+                <input type="submit" id="botao" value="RETORNAR">
+              </form>
+        </section>
