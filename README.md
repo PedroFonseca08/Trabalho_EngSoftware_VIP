@@ -9,7 +9,7 @@
 
 ## *Descrição do Problema:*
 
-Uma loja no interior de Minas Gerais chamada NJack percebeu durante a pandemia de COVID o quão importante é estar presente na internet e nas redes sociais, pois mesmo sem a presença física dos clientes, é importante que a loja esteja divulgando seus produtos. Desse modo, o dono desse comércio está tentando alcançar novos patamares por meio de um site que permite a visualização e descrição de seus respectivos produtos (uma espécie de mostruário).
+Uma lojaa no interior de Minas Gerais chamada NJack percebeu durante a pandemia de COVID o quão importante é estar presente na internet e nas redes sociais, pois mesmo sem a presença física dos clientes, é importante que a loja esteja divulgando seus produtos. Desse modo, o dono desse comércio está tentando alcançar novos patamares por meio de um site que permite a visualização e descrição de seus respectivos produtos (uma espécie de mostruário).
 
 ## *O que o sistema deverá fazer:*
 
