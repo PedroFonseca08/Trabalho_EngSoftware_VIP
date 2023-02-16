@@ -1,0 +1,115 @@
+body{
+    position: absolute;
+    background-image: url(_imagens/fundo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+header#cabecalho{
+    display: block;
+    position: absolute;
+    background-color: #053017;
+}
+
+header h1{
+    position: absolute;
+    margin-left: 1.5em;
+}
+header#cabecalho img#mulherCompras{
+    position:absolute;
+    top: 1.3em;
+    left: 9.5em;
+}
+
+header#cabecalho form{
+    position:absolute;
+    top: 1em;
+    left: 30em;
+    width: 35em;
+}
+
+label{
+    display: block;
+}
+
+input, button{
+    padding: 5px;
+    background-color: #164924;
+}
+
+input{
+    background-color: #75977E;
+    width: 50%;
+}
+
+header#cabecalho img#carrinho{
+    position:absolute;
+    top: 1.5em;
+    left: 70em;
+}
+
+header#cabecalho img#meuPerfil{
+    position:absolute;
+    top: 1.5em;
+    margin-left: 75em;
+}
+
+section#principal form{
+    display: block;
+    margin-top: 5em;
+    margin-left: 10em;
+    font-size: 13pt;
+}
+
+section#principal label{
+    margin-bottom: -0.5em;
+}
+
+section#principal input{
+    margin-bottom: 1em;
+}
+
+section#principal input#nome{
+    width: 120%;
+    height: 1.5em;
+}
+
+section#principal input#descricao{
+    width: 120%;
+    height: 1.5em;
+}
+
+section#principal input#foto{
+    width: 30%;
+    height: 1.5em;
+}
+
+section#principal input#qtdProduto{
+    width: 30%;
+    height: 1.5em;
+}
+
+section#principal input#preco{
+    width: 30%;
+    height: 1.5em;
+}
+
+
+form#cadastrar input#botao{
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+    height: 3.5em;
+    margin-left: 50em;
+    color:aliceblue;
+    font-size: 12;
+    width: 10em;
+}
+
+form#retornar input#botao{
+    height: 3.5em;
+    font-size: 12;
+    color:aliceblue;
+    width: 10em;
+}
+
