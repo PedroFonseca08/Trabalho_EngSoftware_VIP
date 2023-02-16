@@ -1,0 +1,76 @@
+body{
+    position: absolute;
+    background-image: url(_imagens/fundo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header#cabecalho{
+    display: block;
+    position: absolute;
+    background-color: #053017;
+}
+
+header h1{
+    position: absolute;
+    margin-left: 1.5em;
+}
+header#cabecalho img#mulherCompras{
+    position:absolute;
+    top: 1.3em;
+    left: 9.5em;
+}
+
+header#cabecalho form{
+    position:absolute;
+    top: 1em;
+    left: 30em;
+    width: 35em;
+}
+
+label{
+    display: block;
+}
+
+input, button{
+    padding: 5px;
+    background-color: #164924;
+}
+
+input{
+    background-color: #75977E;
+    width: 50%;
+}
+
+header#cabecalho img#carrinho{
+    position:absolute;
+    top: 1.5em;
+    left: 70em;
+}
+
+header#cabecalho img#meuPerfil{
+    position:absolute;
+    top: 1.5em;
+    margin-left: 75em;
+}
+
+section#principal form{
+    display: block;
+    margin-top: 7em;
+    margin-left: 10em;
+    font-size: 15pt;
+}
+
+section#principal input#endereco{
+    width: 200%;
+    height: 2em;
+}
+
+section#principal input#qtdProduto{
+    height: 2em;
+}
+
+section#principal input#botao{
+    margin-top: 15em;
+    height: 2em;
+}
