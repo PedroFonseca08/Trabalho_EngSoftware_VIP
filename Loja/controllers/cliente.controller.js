@@ -46,10 +46,8 @@ async function deleteCliente(req, res){
     }
 }
 
-async function fazerLogin(req, res){
+async function fazerLogin(nome, senha){
 
-    const nome = req.body.nome;
-    const senha = req.body.senha;
     console.log(nome + " " + senha);
 
     if((!nome)||(!senha)) {
@@ -59,5 +57,6 @@ async function fazerLogin(req, res){
        return await clienteService.fazerLogin(nome, senha)
     }
 }
+
 
 export default{getAllClientes, getCliente, createCliente, deleteCliente, fazerLogin}

@@ -13,20 +13,25 @@
         <hgroup>
             <section id="right">
                 <script type="text/javascript">
-                    function autenticar(nome, senha){
-                        var nome1 = nome.toString();
-                        alert(nome1);
-                        if(fazerlogin(nome, senha) == true){
-                            console.log("entro no if")
+                    function autenticar(){
+                        event.preventDefault();
+                        nome = new String(document.getElementById('nome').value);
+                        senha = new String(document.getElementById('senha').value);
+
+                        //alert(nome + " " + senha)
+                        if( logar(nome, senha) ){
+                            window.location.href = "../index.html";
                         }
                         else{
-                            console.log("entrou no else")
+                            alert("entrou no else")
                         }
                     }
-                    console.log("entro aq")
-                    autenticar(nome, senha);
-                </script>   
-                <form id="login" onsubmit="autenticar(nome, senha)">
+                </script>
+                <script type="module">
+                    logar(nome, senha);
+                    export default logar;
+                </script>
+                <form id="login" onsubmit="autenticar()" method="post">
                     <h2>Fazer Login</h2>
                     <label for="nome">Nome de Usuário:</label><br>
                     <input type="text" id="nome" name="nome"><br>
