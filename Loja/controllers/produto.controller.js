@@ -8,8 +8,8 @@ async function getAllProdutos(req, res){
 
 async function getProduto(req, res){
 
-    const nome = req.params.nome;
-
+    const nome = req.body.nome;
+    console.log("nome: " + nome);
     if(!nome){
         res.send("Nome de produto inválido!!!");
     }
