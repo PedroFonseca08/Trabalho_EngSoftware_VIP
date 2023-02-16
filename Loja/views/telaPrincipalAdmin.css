@@ -17,6 +17,7 @@ header h1{
     position: absolute;
     margin-left: 1.5em;
 }
+
 header#cabecalho img#mulherCompras{
     position:absolute;
     top: 1.3em;
@@ -57,7 +58,7 @@ header#cabecalho img#meuPerfil{
 }
 
 header#cabecalho img#gerenciamento{
-    position: absolute;
+    position:absolute;
     top: 1.5em;
     margin-left: 65em;
 }
