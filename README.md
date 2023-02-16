@@ -65,5 +65,27 @@ O site terá por objetivo mostrar os diversos produtos da loja, assim como verif
 * HTML5
 * CSS3
 * Java Script ES2022 
-* SQLITE3
+* POSTGRE15.2
 * NODE.JS 18.13.0 LTS
+
+## *Regras de uso do Git:*
+
+*Funções de cada pasta do projeto*
+
+* Pasta routes: Deve possuir arquivos em javascript que contenham as rotas que referenciam os métodos a serem utilizados pelo controlador.
+
+* Pasta controller: Deve possuir arquivos que estabelecem a conexão entre as rotas e os serviços.
+
+* Pasta service: Deve possuir arquivos em javascript que contenham as regras de negócios do projeto e enviam a requisição recebida para os arquivos de persistência de dados.
+
+* Pasta persistence: Deve possuir arquivos em javascript que estabelecem a conexão entre os serviços e o banco de dados.
+
+* Pasta views: Deve possuir arquivos em html e css que representam as interfaces do site.
+
+*Regras de commit*
+
+* Os commits devem ser enviados com mensagens claras e bem definidas.
+
+*Regras de issue*
+
+* As issues estabelecidas no git-hub devem estar coerente com o progresso do projeto.
