@@ -12,18 +12,10 @@
         </header>
         <hgroup>
             <section id="right">
-                <form id="login">
-                    <h2>Fazer Login</h2>
-                    <label for="nome">Nome de Usuário:</label><br>
-                    <input type="text" id="nome" name="nome"><br>
-                    <label for="senha">Senha:</label><br>
-                    <input type="password" id="senha" name="senha"><br><br>
-                    <button id="botao" type="submit" onclick="autenticar()"> Acessar Conta </button><br><br><br>
-                </form>
-                <script type="text/javascript" src="../controllers/cliente.controller.js">
-                    function autenticar(){
-                        const nome = req.body.nome;
-                        const senha = req.body.senha;
+                <script type="text/javascript">
+                    function autenticar(nome, senha){
+                        var nome1 = nome.toString();
+                        alert(nome1);
                         if(fazerlogin(nome, senha) == true){
                             console.log("entro no if")
                         }
@@ -33,7 +25,15 @@
                     }
                     console.log("entro aq")
                     autenticar(nome, senha);
-                </script>
+                </script>   
+                <form id="login" onsubmit="autenticar(nome, senha)">
+                    <h2>Fazer Login</h2>
+                    <label for="nome">Nome de Usuário:</label><br>
+                    <input type="text" id="nome" name="nome"><br>
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" id="senha" name="senha"><br><br>
+                    <button id="botao" type="submit"> Acessar Conta </button><br><br><br>
+                </form>
             </section>  
             <section id="left">  
                 <form id="cadastro" action="./telaCadastro.html">
