@@ -31,9 +31,12 @@ async function deleteCliente(nome){
 
 async function fazerLogin(nome, senha){
     const cliente = await clientePersistence.fazerLogin(nome, senha);
+    console.log(cliente.length);
     if(cliente.length > 0){
-        
-        return true;
+        return await true;
+    }
+    else {
+        return await false;
     }
 }
 

@@ -9,6 +9,7 @@ const servidor = express();
 
 servidor.use(express.json())
 servidor.use(express.urlencoded({extended: true}))
+servidor.use(express.static('views'))
 
 servidor.use("/cliente", clienteRouter)
 servidor.use("/produto", produtoRouter)

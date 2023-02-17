@@ -12,26 +12,7 @@
         </header>
         <hgroup>
             <section id="right">
-                <script type="text/javascript">
-                    function autenticar(){
-                        event.preventDefault();
-                        nome = new String(document.getElementById('nome').value);
-                        senha = new String(document.getElementById('senha').value);
-
-                        //alert(nome + " " + senha)
-                        if( logar(nome, senha) ){
-                            window.location.href = "../index.html";
-                        }
-                        else{
-                            alert("entrou no else")
-                        }
-                    }
-                </script>
-                <script type="module">
-                    logar(nome, senha);
-                    export default logar;
-                </script>
-                <form id="login" onsubmit="autenticar()" method="post">
+                <form id="login" action="http://localhost:3000/cliente/login" method="post">
                     <h2>Fazer Login</h2>
                     <label for="nome">Nome de Usuário:</label><br>
                     <input type="text" id="nome" name="nome"><br>

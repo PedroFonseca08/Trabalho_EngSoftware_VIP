@@ -46,15 +46,22 @@ async function deleteCliente(req, res){
     }
 }
 
-async function fazerLogin(nome, senha){
+async function fazerLogin(req, res){
 
-    console.log(nome + " " + senha);
+    const nome = req.body.nome;
+    const senha = req.body.senha;
 
     if((!nome)||(!senha)) {
-        return false;
+        res.send("Usuário ou senha incorretos...")
     }
     else {
-       return await clienteService.fazerLogin(nome, senha)
+        const existeConta = await clienteService.fazerLogin(nome, senha);
+        if ( existeConta ){
+            res.redirect("/telaPrincipal.html");
+        }
+        else {
+            res.send("Usuário ou senha incorretos...")
+        }
     }
 }
 
