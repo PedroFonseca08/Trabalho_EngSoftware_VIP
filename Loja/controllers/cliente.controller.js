@@ -30,7 +30,13 @@ async function createCliente(req, res){
         res.send("Nome, email ou senha inválidos")
     }
     else {
-        res.send(await clienteService.createCliente(nome, email, senha));
+        const existeConta = await clienteService.createCliente(nome, email, senha);
+        if ( existeConta ){
+            res.redirect("/telaPrincipal.html");
+        }
+        else {
+            res.send("Não foi possível realizar cadastro");
+        }
     }
 }
 
@@ -46,15 +52,22 @@ async function deleteCliente(req, res){
     }
 }
 
-async function fazerLogin(nome, senha){
+async function fazerLogin(req, res){
 
-    console.log(nome + " " + senha);
+    const nome = req.body.nome;
+    const senha = req.body.senha;
 
     if((!nome)||(!senha)) {
-        return false;
+        res.send("Usuário ou senha incorretos...")
     }
     else {
-       return await clienteService.fazerLogin(nome, senha)
+        const existeConta = await clienteService.fazerLogin(nome, senha);
+        if ( existeConta ){
+            res.redirect("/telaPrincipal.html");
+        }
+        else {
+            res.send("Usuario não encontrado");
+        }
     }
 }
 

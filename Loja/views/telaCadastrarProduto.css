@@ -55,6 +55,12 @@ header#cabecalho img#meuPerfil{
     margin-left: 75em;
 }
 
+header#cabecalho img#gerenciamento{
+    position:absolute;
+    top: 1.5em;
+    margin-left: 65em;
+}
+
 section#principal form{
     display: block;
     margin-top: 5em;
