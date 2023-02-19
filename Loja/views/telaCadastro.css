@@ -1,6 +1,6 @@
 body{
     position: absolute;
-    background-image: url(_imagens/fundo.jpeg);
+    background-image: url(_imagens/fundo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
