@@ -1,30 +1,105 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>NJACK</title>
-        <link rel="stylesheet" href="./telaPrincipalAdmin.css">
-    </head>
-    <body>
-        <header id="cabecalho">
-            <h1>NJACK</h1>
-            <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
-            <img id="carrinho" src="_imagens/carrinho.png" height="40px">
-            <img id="meuPerfil" src="_imagens/meuPerfil.png" height="40px">
-            <img id="gerenciamento" src="_imagens/gerenciamento.png" height="30px">
-            <form action="http://localhost:3000/produto/busca" method="post">
-                <label for="nome"></label>
-                <input type="search" id="nome" name="nome">
-                <button type="submit"><img id="imagem" src="_imagens/busca.png" height="20px"></button>
-            </form>
-        </header>
-        
-        <aside id="lateral">
-            <h2>Categorias</h2>
+<html lang="pt-br">
+<head>
+    <title> Njack WebSite </title>
+    <link rel="stylesheet" href="./telaPrincipalAdmin.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1 id="TOPO"> NJACK </h1>
+        <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+        <div class="menuOpcoes">
+            <a id="carrinho" href="http://localhost:3000/carrinho.html" title="Acesse seu Carrinho">
+                <button><img src="_imagens/carrinho.png" height="40px"></button>
+            </a>
+            <a id="meuPerfil" href="http://localhost:3000/meuPerfil.html" title="Acesse seu Perfil">
+                <button><img src="_imagens/meuPerfil.png" height="40px"></button>
+            </a>
+            <a id="gerenciamento" href="http://localhost:3000/contas.html" title="Gerenciar Contas">
+                <button><img src="_imagens/gerenciamento.png" height="40px"></button>
+            </a>
+            <a id="adicionarProduto" href="http://localhost:3000/telaCadastrarProduto.html" title="Adicionar Produto">
+                <button><img src="_imagens/adicionarProduto.png" height="40px"></button>
+            </a>
+        </div>
+        <form action="http://localhost:3000/produto/busca" method="post">
+            <label for="busca"></label>
+            <input type="search" id="busca" name="q" placeholder="Buscar Produto">
+            <button type="submit" title="Buscar"><img id="busca" src="_imagens/busca.png" height="15px"></button>
+        </form>
+    </header>
+    <aside id="lateral">
+        <h2> Categorias </h2>
+        <nav id="menuLateral">
             <ul>
-                <li>Feminino</li>
-                <li>Masculino</li>
-                <li>Infantil</li>
+                <li id="Masculino">
+                    <a href secoes="masculino.html"> Seção Masculina </a>
+                </li>
+                <li id="Feminino">
+                    <a href secoes="feminino.html"> Seção Feminina </a>
+                </li>
+                <li id="Infantil">
+                    <a href secoes="infantil.html"> Seção Infantil </a>
+                </li>
             </ul>
-        </aside>
-    </body>
+        </nav>
+    </aside>
+    <section id="Produtos">
+        <div class="produto" id="primeiro">
+            <form class="removerProduto" action="http://localhost:3000/produto" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/produto" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="primeiroProduto">
+        </div>
+        <div class="produto" id="segundo">
+            <form class="removerProduto" action="http://localhost:3000/produto" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/produto" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="segundoProduto">
+        </div>
+        <div class="produto" id="terceiro">
+            <form class="removerProduto" action="http://localhost:3000/produto" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/produto" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="terceiroProduto">
+        </div>
+        <div class="produto" id="quarto">
+            <form class="removerProduto" action="http://localhost:3000/produto" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/produto" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="quartoProduto">
+        </div>
+        <div class="produto" id="quinto">
+            <form class="removerProduto" action="http://localhost:3000/produto" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/produto" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="quintoProduto">
+        </div>
+        <div class="produto" id="sexto">
+            <form class="removerProduto" action="http://localhost:3000/produto" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/produto" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="sextoProduto">
+        </div>
+    </section>
+</body>
 </html>

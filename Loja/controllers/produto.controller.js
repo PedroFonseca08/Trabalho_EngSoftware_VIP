@@ -31,7 +31,7 @@ async function createProduto(req, res){
     else {
         res.send(await produtoService.createProduto(nome, descricao, preco, qtd));
     }
-}
+} 
 
 async function deleteProduto(req, res){
     

@@ -36,7 +36,7 @@ async function createCliente(nome, email, senha){
 
     const conn = await BD.conectar();
     try {
-        const insere = await conn.query("INSERT INTO cliente VALUES (DEFAULT,$1,$2,$3) RETURNING * ", [nome, email, senha]);
+        const insere = await conn.query("INSERT INTO cliente VALUES (DEFAULT,$1,$2,$3,DEFAULT) RETURNING * ", [nome, email, senha]);
         console.log("createClient !!!");
         return insere.rows;
     }

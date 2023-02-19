@@ -1,68 +1,114 @@
-body{
-    position: absolute;
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    width: 100%;
     background-image: url(_imagens/fundo.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-hgroup h2{
-    color:#053017
+header {
+    padding: 20px 50px;
+    position: relative;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 10;
 }
 
-section#right form#login{
+h1 {
+    color: rgb(0, 88, 22);
+    font-weight: 900;
+    font-size: 40px;
     display: block;
-    position: absolute;
-    left: 100px;
-    width: 250px;
-    padding: 30px 20px 0px 20px;
-    top: 120px;  
-    background-color: rgba(85, 85, 85, 0.2);  
+    position: relative;
+    text-align: center;
 }
 
-section#left form#cadastro{
-    display: block; 
-    position: absolute;
-    left: 700px;
-    width: 250px;
-    padding: 30px 20px 50px 20px;
-    top: 120px;
-    background-color: rgba(85, 85, 85, 0.2);  
+header img#icone {
+    position: relative;
+    display: block;
+    float: left;
+    height: 60px;
+    margin-left: 56%;
+    transform: translateY(-140%);
 }
 
-header#cabecalho{
-    position: absolute;
-    background-color: #053017;
+.login_body {
+    padding: 60px;
+    z-index: 90;
+    position: relative;
+    max-width: 450px;
+    height: 450px;
+    margin-left: 50%;
+    background-color: rgba(85, 85, 85, 0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
 }
 
-header#cabecalho h1{
-    position: absolute;
-    left: 50px;
-    padding: 5px 0px 5px 0px;
+.login_body h2{
+    font-size: 32px;
+    color: rgba(7, 94, 7, 0.93);
+    margin-top: 0;
 }
 
-header#cabecalho img#icone{
-    position:absolute;
-    top: 10px;
-    width: 50px;
-    left: 150px;
+.login_body input{
+    height: 50px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.781);
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    outline: none;
 }
 
-form input{
-    background-color: #77937E;
+.login_body input:hover {
+    background-color: rgba(231, 216, 216, 0.726);
 }
 
-form button#botao{
-    background-color: #104524;
-    color:aliceblue;
-    padding: 10px;
-    margin: 30px auto 10px 100px;
+.input_box {
+    margin-bottom: 25px;
 }
 
-a{
-    color:rgb(3, 58, 31);
+::placeholder {
+    color: black;
+    font-weight: bold;
 }
 
-script{
-    display: none;
+.login_body button {
+    height: 50px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(7, 94, 7, 0.93);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.login_body button:hover {
+    cursor: pointer;
+    background-color: rgba(7, 94, 7, 0.93);
+}
+
+.sign_up {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.sign_up a {
+    color:rgb(12, 110, 28);
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.sign_up a:hover {
+    text-decoration: underline;
 }

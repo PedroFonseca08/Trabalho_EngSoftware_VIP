@@ -56,11 +56,15 @@ async function fazerLogin(req, res){
     }
     else {
         const existeConta = await clienteService.fazerLogin(nome, senha);
-        if ( existeConta ){
+        console.log(existeConta);
+        if ( existeConta == 1 ){
+            res.redirect("/telaPrincipalAdmin.html");
+        }
+        else if ( existeConta == 2 ){
             res.redirect("/telaPrincipal.html");
         }
         else {
-            res.send("Usuário ou senha incorretos...")
+            res.redirect("/telaLogin.html");
         }
     }
 }

@@ -31,12 +31,17 @@ async function deleteCliente(nome){
 
 async function fazerLogin(nome, senha){
     const cliente = await clientePersistence.fazerLogin(nome, senha);
-    console.log(cliente.length);
+    const ehAdmin = cliente[0].ehadmin;
     if(cliente.length > 0){
-        return await true;
+        if ( ehAdmin ){
+            return 1;
+        }
+        else {
+            return 2;
+        }
     }
     else {
-        return await false;
+        return false;
     }
 }
 

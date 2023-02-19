@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <title>NJACK</title>
         <link rel="stylesheet" href="./telaLogin.css">
     </head>
     <body>
-        <!--img id="fundo" src="_imagens/fundo.jpeg"-->
         <header id="cabecalho"> 
             <h1>NJACK</h1>
             <img id="icone" src="_imagens/mulherCompras.png">
         </header>
-        <hgroup>
-            <section id="right">
-                <form id="login" action="http://localhost:3000/cliente/login" method="post">
-                    <h2>Fazer Login</h2>
-                    <label for="nome">Nome de Usuário:</label><br>
-                    <input type="text" id="nome" name="nome"><br>
-                    <label for="senha">Senha:</label><br>
-                    <input type="password" id="senha" name="senha"><br><br>
-                    <button id="botao" type="submit"> Acessar Conta </button><br><br><br>
+        
+        <div class="login_body">
+            <div class="login_box">
+                <h2> Entrar </h2>
+                <form action="http://localhost:3000/cliente/login" method="post">
+                    <div class="input_box">
+                        <input required type="text" name="nome" id="nome" placeholder="Nome de Usuário">
+                    </div>
+
+                    <div class="input_box">
+                        <input required type="password" name="senha" id="senha" placeholder="Senha">
+                    </div>
+
+                    <div>
+                        <button type="submit"> Fazer Login </button>
+                    </div>
                 </form>
-            </section>  
-            <section id="left">  
-                <form id="cadastro" action="./telaCadastro.html">
-                    <h2>&nbsp &nbsp Ainda Não Sou <br> &nbsp &nbsp &nbsp &nbsp Cliente</h2>
-                    <button id="botao" type="submit"> CADASTRAR </button>
-                </form>
-            </section>
-        </hgroup>
+
+                <div class="login_footer">
+                    <div class="sign_up">
+                        <p> Novo por aqui? <a href="http://localhost:3000/telaCadastro.html"> Cadastrar </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
