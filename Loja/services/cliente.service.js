@@ -9,13 +9,13 @@ async function getCliente(nome){
 }
 
 async function createCliente(nome, email, senha){
-    const cliente = await getCliente(nome);
+    const cliente = await clientePersistence.createCliente(nome, email, senha);
     console.log(cliente);
-    if(cliente.length == 0){
-        return await clientePersistence.createCliente(nome, email, senha);
+    if(cliente.length > 0){
+        return true;
     }
     else{
-        return "Nome de usuário indisponível!";
+        return false;
     }
 }
 

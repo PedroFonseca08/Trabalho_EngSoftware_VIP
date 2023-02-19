@@ -30,7 +30,13 @@ async function createCliente(req, res){
         res.send("Nome, email ou senha inválidos")
     }
     else {
-        res.send(await clienteService.createCliente(nome, email, senha));
+        const existeConta = await clienteService.createCliente(nome, email, senha);
+        if ( existeConta ){
+            res.redirect("/telaPrincipal.html");
+        }
+        else {
+            res.send("Não foi possível realizar cadastro");
+        }
     }
 }
 
