@@ -21,7 +21,7 @@ async function getProduto(nome){
 
     const conn = await BD.conectar();
     try {
-        const consulta = await conn.query("SELECT * FROM produto WHERE nome=$1", [nome]);
+        const consulta = await conn.query("SELECT * FROM produto WHERE nome LIKE $1", ['%'+nome+'%']);
         console.log("getProduto !!! \n" + consulta.rows);
         return consulta.rows;
     }
