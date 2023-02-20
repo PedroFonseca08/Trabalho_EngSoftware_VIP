@@ -64,24 +64,14 @@ header#cabecalho img{
     position: absolute;
 }
 
-.menuOpcoes a#carrinho{  
-    top: 1.5em;
-    left: 70em;   
-}
-
-.menuOpcoes a#meuPerfil{
+.menuOpcoes a#gerenciamento{
     top: 1.5em;
     left: 75em;   
 }
 
-.menuOpcoes a#gerenciamento{
-    top: 1.5em;
-    left: 65em;   
-}
-
 .menuOpcoes a#adicionarProduto{
     top: 1.5em;
-    left: 60em;   
+    left: 70em;   
 }
 
 header#cabecalho img#mulherCompras{

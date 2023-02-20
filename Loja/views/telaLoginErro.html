@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>NJACK</title>
+        <link rel="stylesheet" href="./telaLoginErro.css">
+    </head>
+    <body>
+        <header id="cabecalho"> 
+            <h1>NJACK</h1>
+            <img id="icone" src="_imagens/mulherCompras.png">
+        </header>
+        
+        <div class="login_body">
+            <div class="login_box">
+                <h2> Entrar </h2>
+                <form action="http://localhost:3000/cliente/login" onsubmit="mensagemErro()" method="post">
+                    <div class="input_box">
+                        <input required type="text" name="nome" id="nome" placeholder="Nome de Usuário">
+                    </div>
+
+                    <div class="input_box">
+                        <input required type="password" name="senha" id="senha" placeholder="Senha">
+                    </div>
+
+                    <div>
+                        <button type="submit"> Fazer Login </button>
+                    </div>
+                </form>
+
+                <div class="login_footer">
+
+                    <div class="erro">
+                        <p> Usuário ou senha incorretos!!! </p>
+                    </div>
+
+                    <div class="sign_up">
+                        <p> Novo por aqui? <a href="http://localhost:3000/telaCadastro.html"> Cadastrar </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
