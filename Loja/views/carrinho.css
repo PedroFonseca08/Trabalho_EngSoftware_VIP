@@ -1,78 +1,119 @@
-body{
+
+/*CABEÇALHO*/
+header#cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 25px 10px;
+    flex-wrap: wrap;
+    background-color: rgba(7, 94, 7, 0.93);
+    width: 100%;
+    height: 41px;
+}
+
+header h1{
     position: absolute;
+    align-self: center;
+    margin-left: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(41, 41, 41);
+}
+
+
+ input, button{
+    border-radius: 40px;
+    background-color: #d0ffdd;
+    align-self: center;    
+}
+
+header#cabecalho img{
+    padding: 4px, 4px;
+}
+
+.menuOpcoes a{  
+    align-self: center; 
+    text-decoration: none;
+    position: absolute;
+}
+
+.menuOpcoes a#carrinho{  
+    top: 1.5em;
+    left: 70em;   
+}
+
+.menuOpcoes a#meuPerfil{
+    top: 1.5em;
+    left: 75em;   
+}
+
+header#cabecalho img#mulherCompras{
+    position:absolute;
+    align-self: center;
+    margin-left: 11%;
+}
+
+/*FUNDO*/
+body{
     background-image: url(_imagens/fundo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-header#cabecalho{
-    display: block;
+/*.botoes{
     position: absolute;
-    background-color: #053017;
+    margin-top: 25%;
+    transform:translateX(-50%);
+}*/
+
+.botao button{
+    margin-top: 25%;
+    margin-left: 60%;
+    margin:0;
+    float: right;
+    transform:translateY(400%); 
+    height: 60px;  
+    width: 200px;  
 }
 
-header h1{
+
+/*SEÇÃO DE PRODUTOS*/
+section#Produtos{
+    padding: 20px 20px;
+}
+
+section#Produtos div{
+    margin: 10%;
+    border-radius: 10px;
+    background-color: #215f2488;
+    height: 60px;
+    width: 600px;
+    margin-left: 3%;
+}
+
+.produto span{
     position: absolute;
-    margin-left: 1.5em;
+    align-self: center;
+    margin-top: 30%;
+    margin-left: 28%;
+    height: 100px;
+    width: 100px;
 }
-header#cabecalho img#mulherCompras{
-    position:absolute;
-    top: 1.3em;
-    left: 9.5em;
+
+section#Produtos div#primeiro{
+    position: absolute;
+    margin-top: 2%;
+}
+
+section#Produtos div#segundo{
+    position: absolute;
+    margin-top: 8%;
+}
+
+section#Produtos div#terceiro{
+    position: absolute;
+    margin-top: 14%;
 }
 
 
-header#cabecalho form{
-    position:absolute;
-    top: 1em;
-    left: 30em;
-    width: 35em;
-}
-
-label{
-    display: block;
-}
-
-input, button{
-    padding: 5px;
-    background-color: #164924;
-}
-
-input{
-    background-color: #75977E;
-    width: 50%;
-}
-
-header#cabecalho img#carrinho{
-    position:absolute;
-    top: 1.5em;
-    left: 70em;
-}
-
-header#cabecalho img#meuPerfil{
-    position:absolute;
-    top: 1.5em;
-    margin-left: 75em;
-}
-
-section#principal h1{
-    margin: 5em 20em 15em 5em;
-}
-
-section#principal button{
-    height: 3em;
-    width: 10em;
-    color:aliceblue;
-}
-
-form#comprar button{
-    position: relative;
-    left: 70em;
-}
-
-form#retornar button{
-    position: relative;
-    left: 50em;
-    top: -3em;
-}

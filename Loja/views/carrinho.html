@@ -1,32 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>NJACK</title>
-        <link rel="stylesheet" href="./carrinho.css">
-    </head>
-    <body>
-        <header id="cabecalho"> 
-            <h1>NJACK</h1>
-            <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
-            <img id="carrinho" src="_imagens/carrinho.png" height="40px">
-            <img id="meuPerfil" src="_imagens/meuPerfil.png" height="40px">
-            <form action=" " method="post">
-                <label for="busca"></label>
-                <input type="search" id="busca" name="q">
-                <button type="submit"><img id="busca" src="_imagens/busca.png" height="20px"></button>
-              </form>
-        </header>
+<html lang="pt-br"> 
+<head>
+    <title> Njack WebSite </title>
+    <link rel="stylesheet" href="./carrinho.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1 id="TOPO"> NJACK </h1>
+        <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+        <div class="menuOpcoes">
+            <a id="carrinho" href="http://localhost:3000/carrinho.html" title="Acesse seu Carrinho">
+                <button><img src="_imagens/carrinho.png" height="40px"></button>
+            </a>
+            <a id="meuPerfil" href="http://localhost:3000/telaCadastro.html" title="Acesse seu Perfil">
+                <button><img src="_imagens/meuPerfil.png" height="40px"></button>
+            </a>
+        </div>
+    </header>
 
         <section id="principal">
             <h1>Carrinho de Compras</h1>
-            <form id="comprar" action="./telaCadastro.html">
-                <button id="botao" type="submit"> COMPRAR </button>
-            </form>
-
-            <form id="retornar" action="./telaPrincipal.html">
-                <button id="botao" type="submit"> RETORNAR </button>
-            </form>
-        </section>
+            <section id="Produtos">
+                <div class="produto" id="primeiro">
+                    <span id="1"></span>
+                </div>
+                <div class="produto" id="segundo">
+                    <span id="2"></span>
+                </div>
+                <div class="produto" id="terceiro">
+                    <span id="3"></span>
+                </div>
+            </section>
+            <section>
+                <div class="botao">
+                    <a href="./carrinho.html">
+                        <button type="submit"> COMPRAR </button>
+                    </a>
+                </div>
+            </section>
+        
     
     </body>
 </html>
