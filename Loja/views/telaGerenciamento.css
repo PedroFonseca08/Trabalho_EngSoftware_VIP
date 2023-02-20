@@ -1,0 +1,120 @@
+
+/*CABEÇALHO*/
+header#cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 25px 10px;
+    flex-wrap: wrap;
+    background-color: rgba(7, 94, 7, 0.93);
+    width: 100%;
+    height: 41px;
+}
+
+header h1{
+    position: absolute;
+    align-self: center;
+    margin-left: 2%;
+    margin-top: -3%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(41, 41, 41);
+}
+
+button{
+    border-radius: 40px;
+    background-color: #d0ffdd;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #63aa77;; /* Green */
+}
+
+header#cabecalho img{
+    padding: 4px 4px;
+}
+
+.menuOpcoes a{  
+    align-self: center; 
+    text-decoration: none;
+    position: absolute;
+}
+
+.menuOpcoes a#gerenciamento{
+    top: 1.5em;
+    left: 75em;   
+}
+
+.menuOpcoes a#adicionarProduto{
+    top: 1.5em;
+    left: 70em;   
+}
+
+header#cabecalho img#mulherCompras{
+    position:absolute;
+    align-self: center;
+    margin-left: 11%;
+}
+
+/*FUNDO*/
+body{
+    background-image: url(_imagens/fundo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*CONTAS*/
+
+section .contas {
+    padding: 60px;
+    z-index: 90;
+    position: relative;
+    max-width: 800px;
+    height: 500px;
+    margin-top: 2%;
+    margin-left: 50%;
+    background-color: rgba(85, 85, 85, 0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+}
+
+.conta {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    background-color: rgb(230, 230, 230);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contas h2 {
+    margin-top: 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.campo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.dado {
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+.conta button {
+    background-color: rgb(255, 50, 50);
+    margin-left: 10px;
+}
+
+.conta button:hover {
+    cursor: pointer;
+}
+
