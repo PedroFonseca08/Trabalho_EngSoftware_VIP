@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Njack WebSite </title>
+    <link rel="stylesheet" href="./telaGerenciamento.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <a href="http://localhost:3000/telaPrincipalAdmin.html">
+            <h1 id="TOPO"> NJACK </h1>
+        </a>
+        <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+        <div class="menuOpcoes">
+            </a>
+            <a id="gerenciamento" href="http://localhost:3000/telaGerenciamento.html" title="Gerenciar Contas">
+                <button><img src="_imagens/gerenciamento.png" height="40px"></button>
+            </a>
+            <a id="adicionarProduto" href="http://localhost:3000/telaCadastrarProduto.html" title="Adicionar Produto">
+                <button><img src="_imagens/adicionarProduto.png" height="40px"></button>
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="contas">
+
+            <h2> Clientes: </h2>
+
+            <div class="conta">
+                <span class="campo"> Nome: </span>
+                <span class="dado"> ClienteExemplo1 </span>
+                <span class="campo"> E-mail: </span>
+                <span class="dado"> clienteExemplo1@gmail.com </span>
+                <button type="submit" onclick="removerCliente()" title="Remover Cliente"> X </button>
+            </div>
+
+            <div class="conta">
+                <span class="campo"> Nome: </span>
+                <span class="dado"> ClienteExemplo2 </span>
+                <span class="campo"> E-mail: </span>
+                <span class="dado"> clienteExemplo2@gmail.com </span>
+                <button type="submit" onclick="removerCliente()" title="Remover Cliente"> X </button>
+            </div>
+
+            <div class="conta">
+                <span class="campo"> Nome: </span>
+                <span class="dado"> ClienteExemplo3 </span>
+                <span class="campo"> E-mail: </span>
+                <span class="dado"> clienteExemplo3@gmail.com </span>
+                <button type="submit" onclick="removerCliente()" title="Remover Cliente"> X </button>
+            </div>
+
+            <div class="conta">
+                <span class="campo"> Nome: </span>
+                <span class="dado"> ClienteExemplo4 </span>
+                <span class="campo"> E-mail: </span>
+                <span class="dado"> clienteExemplo4@gmail.com </span>
+                <button type="submit" onclick="removerCliente()" title="Remover Cliente"> X </button>
+            </div>
+
+            <div class="conta">
+                <span class="campo"> Nome: </span>
+                <span class="dado"> ClienteExemplo5 </span>
+                <span class="campo"> E-mail: </span>
+                <span class="dado"> clienteExemplo5@gmail.com </span>
+                <button type="submit" onclick="removerCliente()" title="Remover Cliente"> X </button>
+            </div>
+
+            <div class="conta">
+                <span class="campo"> Nome: </span>
+                <span class="dado"> ClienteExemplo6 </span>
+                <span class="campo"> E-mail: </span>
+                <span class="dado"> clienteExemplo6@gmail.com </span>
+                <button type="submit" onclick="removerCliente()" title="Remover Cliente"> X </button>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

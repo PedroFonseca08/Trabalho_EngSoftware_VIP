@@ -62,7 +62,6 @@ async function fazerLogin(req, res){
     }
     else {
         const existeConta = await clienteService.fazerLogin(nome, senha);
-        console.log(existeConta);
         if ( existeConta == 1 ){
             res.redirect("/telaPrincipalAdmin.html");
         }
@@ -70,7 +69,7 @@ async function fazerLogin(req, res){
             res.redirect("/telaPrincipal.html");
         }
         else {
-            res.redirect("/telaLogin.html");
+            res.redirect("/telaLoginErro.html");
         }
     }
 }

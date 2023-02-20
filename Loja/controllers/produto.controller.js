@@ -26,10 +26,13 @@ async function createProduto(req, res){
     const qtd = req.body.qtd;
 
     if((!nome)||(!descricao)||(!preco)||(!qtd)) {
-        res.send("Nome, descricao, preco ou quantidade inválidos");
+        res.redirect("/telaCadastrarProduto.html");
     }
     else {
-        res.send(await produtoService.createProduto(nome, descricao, preco, qtd));
+        cadastrar = await produtoService.createProduto(nome, descricao, preco, qtd);
+        if(cadastrar){
+            res.redirect("/telaCadastrarProduto.html");
+        }
     }
 } 
 
