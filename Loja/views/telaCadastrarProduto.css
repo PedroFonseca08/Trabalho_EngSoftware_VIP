@@ -1,65 +1,131 @@
+/*FUNDO*/
 body{
-    position: absolute;
     background-image: url(_imagens/fundo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    overflow-x: hidden;
 }
-header#cabecalho{
-    display: block;
-    position: absolute;
-    background-color: #053017;
+/*CABEÇALHO*/
+header#cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 25px 10px;
+    flex-wrap: wrap;
+    background-color: rgba(7, 94, 7, 0.93);
+    width: 100%;
+    height: 41px;
 }
 
-header h1{
+header h1 {
     position: absolute;
-    margin-left: 1.5em;
+    align-self: center;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(41, 41, 41);
 }
+
+button{
+    border-radius: 40px;
+    background-color: #d0ffdd;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #63aa77;; /* Green */
+}
+
+header#cabecalho img{
+    padding: 4px 4px;
+}
+
+.menuOpcoes a{  
+    align-self: center; 
+    text-decoration: none;
+    position: absolute;
+}
+
+.menuOpcoes a#carrinho{  
+    top: 1.5em;
+    left: 70em;   
+}
+
+.menuOpcoes a#meuPerfil{
+    top: 1.5em;
+    left: 75em;   
+}
+
 header#cabecalho img#mulherCompras{
     position:absolute;
-    top: 1.3em;
-    left: 9.5em;
+    align-self: center;
+    margin-left: 11%;
 }
 
-header#cabecalho form{
-    position:absolute;
-    top: 1em;
-    left: 30em;
-    width: 35em;
+/*CADASTRAR PRODUTO*/
+.cadastrarProduto_body {
+    margin-top: 2%;
+    padding: 30px;
+    z-index: 90;
+    position: relative;
+    max-width: 450px;
+    height: 450px;
+    margin-left: 50%;
+    background-color: rgba(85, 85, 85, 0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
 }
 
-label{
-    display: block;
+.cadastrarProduto_body h2{
+    font-size: 32px;
+    color: rgba(7, 94, 7, 0.93);
+    margin-top: 0;
 }
 
-input, button{
-    padding: 5px;
-    background-color: #164924;
+.cadastrarProduto_body input{
+    height: 30px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.781);
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    outline: none;
 }
 
-input{
-    background-color: #75977E;
-    width: 50%;
+.cadastrarProduto_body input:hover {
+    background-color: rgba(231, 216, 216, 0.726);
 }
 
-header#cabecalho img#carrinho{
-    position:absolute;
-    top: 1.5em;
-    left: 70em;
+.input_box {
+    margin-bottom: 25px;
 }
 
-header#cabecalho img#meuPerfil{
-    position:absolute;
-    top: 1.5em;
-    margin-left: 75em;
+::placeholder {
+    color: black;
+    font-weight: bold;
 }
 
-header#cabecalho img#gerenciamento{
-    position:absolute;
-    top: 1.5em;
-    margin-left: 65em;
+.cadastrarProduto_body button {
+    height: 50px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(7, 94, 7, 0.93);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 10px;
 }
+
+.cadastrarProduto_body button:hover {
+    cursor: pointer;
+    background-color: rgba(7, 94, 7, 0.93);
+}
+/*
 
 section#principal form{
     display: block;

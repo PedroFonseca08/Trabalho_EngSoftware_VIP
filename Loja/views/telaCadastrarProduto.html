@@ -5,30 +5,47 @@
         <link rel="stylesheet" href="./telaCadastrarProduto.css">
     </head>
     <body>
-        <header id="cabecalho"> 
-            <h1>NJACK</h1>
+        <header id="cabecalho">
+            <h1 id="TOPO"> NJACK </h1>
             <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
-            <img id="carrinho" src="_imagens/carrinho.png" height="40px">
-            <img id="meuPerfil" src="_imagens/meuPerfil.png" height="40px">
-            <img id="gerenciamento" src="_imagens/gerenciamento.png" height="30px">
+            <div class="menuOpcoes">
+                <a id="carrinho" href="http://localhost:3000/carrinho.html" title="Acesse seu Carrinho">
+                    <button><img src="_imagens/carrinho.png" height="40px"></button>
+                </a>
+                <a id="meuPerfil" href="http://localhost:3000/telaCadastro.html" title="Acesse seu Perfil">
+                    <button><img src="_imagens/meuPerfil.png" height="40px"></button>
+                </a>
+            </div>
         </header>
 
         <section id="principal">
-            <form id="cadastrar" action="http://localhost:3000/produto" method="POST">
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome"><br>
-                <label for="descricao">Descrição:</label><br>
-                <input type="text" id="descricao" name="descricao"><br>
-                <label for="foto">Selecione uma imagem:</label><br>
-                <input type="file" id="foto" name="foto"><br>
-                <label for="qtd">Quantidade Produtos:</label><br>
-                <input type="text" id="qtd" name="qtd">
-                <label for="preco">Preço:</label><br>
-                <input type="text" id="preco" name="preco"><br>
-                <input type="submit" id="botao" value="CADASTRAR">
-                </form>
+            <div class="cadastrarProduto_body">
+                <div class="cadastrarProduto_box">
+                    <h2> Cadastrar Produto </h2>
+                    <form action="http://localhost:3000/produto" method="post">
+                        <div class="input_box">
+                            <input required type="text" name="nome" id="nome" placeholder="Nome do Produto:">
+                        </div>
+    
+                        <div class="input_box">
+                            <input required type="text" name="descricao" id="descricao" placeholder="Descrição:">
+                        </div>
 
-                <form id="retornar" action="./telaPrincipalAdmin.html">
-                <input type="submit" id="botao" value="RETORNAR">
-              </form>
+                        <div class="input_box">
+                            <input required type="file" name="foto" id="foto" placeholder="Selecione uma imagem:">
+                        </div>
+                        
+                        <div class="input_box">
+                            <input required type="text" name="qtd" id="qtd" placeholder="Quantidade de Produtos:">
+                        </div>
+
+                        <div class="input_box">
+                            <input required type="text" name="preco" id="preco" placeholder="Preço:">
+                        </div>
+                        <div>
+                            <button type="submit">Cadastrar Produto</button>
+                        </div>
+                    </form>
+                </div>
+            </div>                    
         </section>
