@@ -125,63 +125,16 @@ header#cabecalho img#mulherCompras{
     cursor: pointer;
     background-color: rgba(7, 94, 7, 0.93);
 }
-/*
 
-section#principal form{
-    display: block;
-    margin-top: 5em;
-    margin-left: 10em;
-    font-size: 13pt;
+input[type='file']{
+    display: none;
 }
 
-section#principal label{
-    margin-bottom: -0.5em;
-}
-
-section#principal input{
-    margin-bottom: 1em;
-}
-
-section#principal input#nome{
-    width: 120%;
-    height: 1.5em;
-}
-
-section#principal input#descricao{
-    width: 120%;
-    height: 1.5em;
-}
-
-section#principal input#foto{
-    width: 30%;
-    height: 1.5em;
-}
-
-section#principal input#qtdProduto{
-    width: 30%;
-    height: 1.5em;
-}
-
-section#principal input#preco{
-    width: 30%;
-    height: 1.5em;
-}
-
-
-form#cadastrar input#botao{
-    margin-top: 1.5em;
-    margin-bottom: 0em;
-    height: 3.5em;
-    margin-left: 50em;
-    color:aliceblue;
-    font-size: 12;
-    width: 10em;
-}
-
-form#retornar input#botao{
-    height: 3.5em;
-    font-size: 12;
-    color:aliceblue;
-    width: 10em;
-}
-
+label {
+    background-color:rgba(7, 94, 7, 0.93);
+    border-radius: 5px;
+    color: #f7f1f1;
+    cursor: pointer;
+    margin: 5px;
+    padding: 6px 20px
+ }
