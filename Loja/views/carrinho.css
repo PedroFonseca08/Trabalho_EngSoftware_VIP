@@ -12,23 +12,27 @@ header#cabecalho {
     height: 41px;
 }
 
-header h1{
+header h1 {
     position: absolute;
     align-self: center;
     margin-left: 2%;
+    margin-top: -3%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(41, 41, 41);
 }
 
-
- input, button{
+button{
     border-radius: 40px;
     background-color: #d0ffdd;
-    align-self: center;    
+    align-self: center;
+}
+
+button:hover {
+    background-color: #63aa77;; /* Green */
 }
 
 header#cabecalho img{
-    padding: 4px, 4px;
+    padding: 4px 4px;
 }
 
 .menuOpcoes a{  
@@ -61,46 +65,62 @@ body{
     background-size: cover;
 }
 
-/*.botoes{
-    position: absolute;
-    margin-top: 25%;
-    transform:translateX(-50%);
-}*/
-
-.botao button{
-    margin-top: 25%;
-    margin-left: 60%;
-    margin:0;
-    float: right;
-    transform:translateY(400%); 
-    height: 60px;  
-    width: 200px;  
-}
-
-
 /*SEÇÃO DE PRODUTOS*/
-section#Produtos{
-    padding: 20px 20px;
-}
-
-section#Produtos div{
-    margin: 10%;
+.principal{
+    padding: 60px;
+    z-index: 90;
+    position: relative;
+    max-width: 800px;
+    height: 500px;
+    margin-top: 2%;
+    margin-left: 50%;
+    background-color: rgba(85, 85, 85, 0.3);
     border-radius: 10px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.produto {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px 20px;
     background-color: #215f2488;
-    height: 60px;
-    width: 600px;
-    margin-left: 3%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.produto span{
-    position: absolute;
-    align-self: center;
-    margin-top: 30%;
-    margin-left: 28%;
-    height: 100px;
-    width: 100px;
+.principal button {
+    height: 50px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(7, 94, 7, 0.93);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 10px;
 }
 
+.principal button:hover {
+    cursor: pointer;
+    background-color: rgba(7, 94, 7, 0.93);
+}
+
+.campo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.dado {
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+/*
 section#Produtos div#primeiro{
     position: absolute;
     margin-top: 2%;
@@ -115,5 +135,5 @@ section#Produtos div#terceiro{
     position: absolute;
     margin-top: 14%;
 }
-
+*/
 
