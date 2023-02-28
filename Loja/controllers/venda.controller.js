@@ -36,16 +36,13 @@ async function createVenda(req, res){
 
 async function deleteVenda(req, res){
     
-    const idcliente = req.body.idcliente;
-    const idproduto = req.body.idproduto;
-    const idendereco = req.body.idendereco;
-    const data = req.body.data;
+    const numerovenda = req.body.numerovenda;
 
-    if((!idcliente)||(!idproduto)||(!idendereco)||(!data)) {
-        res.send("Nome, descricao, preco ou quantidade inválidos");
+    if(!numerovenda) {
+        res.send("Numero de venda inválido");
     }
     else {
-        res.send(await vendaService.deleteVenda(idcliente, idproduto, idendereco, data));
+        res.send(await vendaService.deleteVenda(numerovenda));
     }
 }
 
