@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>NJACK</title>
+        <link rel="stylesheet" href="./telaAlterarProdutos.css">
+    </head>
+    <body>
+        <header id="cabecalho">
+            <a href="http://localhost:3000/telaPrincipalAdmin.html">
+                <h1 id="TOPO"> NJACK </h1>
+            </a>
+            <img id="icone" src="_imagens/mulherCompras.png">
+        </header>
+        <hgroup>
+            <section id="principal">
+                <div class="alterarBody">
+                    <form action="http://localhost:3000/produto" method="PUT">
+                        <h2> Alterar Produto </h2>
+                        <div class="input_box">
+                            <input required type="text" id="nome" name="nome" placeholder="Nome do Produto a ser alterado">
+                        </div>
+                        <div class="input_box">
+                            <input required type="text" id="nomeNovo" name="nomeNovo" placeholder="Novo nome do Produto">
+                        </div>
+                        <div class="input_box">
+                            <input required type="text" id="descricao" name="descricao" placeholder="Descricao">
+                        </div>
+                        <div class="input_box">
+                            <input required type="text" id="quantidade" name="quantidade" placeholder="Quantidade">
+                        </div>
+                        <div class="input_box">
+                            <input required type="text" id="preco" name="preco" placeholder="Preço">
+                        </div>
+                        <button id="botao" type="submit"> Alterar </button><br><br><br>
+                    </form>
+                </div>
+            </section>
+        </hgroup>
+    </body>
+</html>

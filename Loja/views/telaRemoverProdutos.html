@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>NJACK</title>
+        <link rel="stylesheet" href="./telaRemoverProdutos.css">
+    </head>
+    <body>
+        <header id="cabecalho">
+            <a href="http://localhost:3000/telaPrincipalAdmin.html">
+                <h1 id="TOPO"> NJACK </h1>
+            </a>
+            <img id="icone" src="_imagens/mulherCompras.png">
+        </header>
+        <hgroup>
+            <section id="principal">
+                <div class="removerBody">
+                    <form action="http://localhost:3000/produto" method="DELETE">
+                        <h2> Remover Produto </h2>
+                        <div class="input_box">
+                            <input required type="text" id="nome" name="nome" placeholder="Nome do Produto">
+                        </div>
+                        <button id="botao" type="submit"> Remover </button><br><br><br>
+                    </form>
+                </div>
+            </section>
+        </hgroup>
+    </body>
+</html>
