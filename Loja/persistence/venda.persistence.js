@@ -38,7 +38,7 @@ async function createVenda(idcliente, idproduto, idendereco, data, qtd){
 
     const conn = await BD.conectar();
     try {
-        const insere = await conn.query("INSERT INTO venda VALUES ($1,$2,$3,$4,$5) RETURNING * ", [idcliente, idproduto, idendereco, data, qtd]);
+        const insere = await conn.query("INSERT INTO venda VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING * ", [idproduto, idcliente, idendereco, data, qtd]);
         console.log("createVenda !!!");
         return insere.rows;
     }
@@ -51,10 +51,10 @@ async function createVenda(idcliente, idproduto, idendereco, data, qtd){
     }
 }
 
-async function deleteVenda(idcliente, idproduto, idendereco, data){
+async function deleteVenda(numerovenda){
     const conn = await BD.conectar();
     try {
-        const deletar = await conn.query("DELETE FROM venda WHERE idcliente=$1 AND idproduto=$2 AND idendereco=$3 AND data=$4 RETURNING *", [idcliente, idproduto, idendereco, data]);
+        const deletar = await conn.query("DELETE FROM venda WHERE numerovenda=$1 RETURNING *", [numerovenda]);
         console.log("deleteVenda !!!");
         return deletar.rows;
     }

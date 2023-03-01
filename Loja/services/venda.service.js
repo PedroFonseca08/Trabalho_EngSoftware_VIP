@@ -13,9 +13,9 @@ async function createVenda(idcliente, idproduto, idendereco, data, qtd){
     return await vendaPersistence.createVenda(idcliente, idproduto, idendereco, data, qtd);
 }
 
-async function deleteVenda(idcliente, idproduto, idendereco, data){
+async function deleteVenda(numerovenda){
 
-    return await vendaPersistence.deleteVenda(idcliente, idproduto, idendereco, data);
+    return await vendaPersistence.deleteVenda(numerovenda);
 }
 
 async function updateVenda(idcliente, novoidproduto, idendereco, data, novoqtd, idproduto){
