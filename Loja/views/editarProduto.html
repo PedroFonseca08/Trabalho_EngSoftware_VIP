@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>NJACK</title>
+        <link rel="stylesheet" href="./telaCadastrarProduto.css">
+    </head>
+    <body>
+        <header id="cabecalho">
+            <a href="http://localhost:3000/telaPrincipalAdmin.html">
+                <h1 id="TOPO"> NJACK </h1>
+            </a>
+            <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+            <div class="menuOpcoes">
+                <a id="carrinho" href="http://localhost:3000/carrinho.html" title="Acesse seu Carrinho">
+                    <button><img src="_imagens/carrinho.png" height="40px"></button>
+                </a>
+                <a id="meuPerfil" href="http://localhost:3000/telaCadastro.html" title="Acesse seu Perfil">
+                    <button><img src="_imagens/meuPerfil.png" height="40px"></button>
+                </a>
+            </div>
+        </header>
+
+        <section id="principal">
+            <div class="cadastrarProduto_body">
+                <div class="cadastrarProduto_box">
+                    <h2> Editar Produto </h2>
+                    <form action="http://localhost:3000/produto" method="post">
+                        <div class="input_box">
+                            <input required type="text" name="nome" id="nome" placeholder="Nome do Produto:">
+                        </div>
+    
+                        <div class="input_box">
+                            <input required type="text" name="descricao" id="descricao" placeholder="Descrição:">
+                        </div>
+
+                        <div class="input_box">
+                                <label id="imagem" for="foto">Selecione uma imagem:</label>
+                                <input required type="file"name="foto" id="foto">                    
+                        </div>
+                        
+                        <div class="input_box">
+                            <input required type="text" name="qtd" id="qtd" placeholder="Quantidade de Produtos:">
+                        </div>
+
+                        <div class="input_box">
+                            <input required type="text" name="preco" id="preco" placeholder="Preço:">
+                        </div>
+                        <div>
+                            <button type="submit">Editar Produto</button>
+                        </div>
+                    </form>
+                </div>
+            </div>                    
+        </section>
