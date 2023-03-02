@@ -1,7 +1,7 @@
 var list = [
-	{"desc":"rice", "amount":"1", "value":"5.40"},
-	{"desc":"beer", "amount":"12", "value":"1.99"},
-	{"desc":"meat", "amount":"1", "value":"15.00"}
+	{"desc":"vestido", "amount":"1", "value":"95.90"},
+	{"desc":"blusa", "amount":"3", "value":"79,90"},
+	{"desc":"calca", "amount":"2", "value":"105.00"}
 ];
 
 
