@@ -137,7 +137,7 @@ section#Produtos{
     margin-left: 600px;
 }
 
-.removerProduto input, .alterarProduto input{
+.removerProduto a, .alterarProduto a{
     float: left;
     border-radius: 10px;
     background-color: #ff5a5a;
