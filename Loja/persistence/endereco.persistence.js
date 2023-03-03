@@ -16,12 +16,12 @@ async function getAllEndereco(idcliente){
 }
 
 
-async function createEndereco(idcliente, logradouro, numero){
+async function createEndereco(login, logradouro, numero){
 
     const conn = await BD.conectar();
     try {
-        const insere = await conn.query("INSERT INTO endereco VALUES (DEFAULT,$1,$2,$3) RETURNING * ", [idcliente, logradouro, numero]);
-        console.log("createClient !!!");
+        const insere = await conn.query("INSERT INTO endereco VALUES (DEFAULT,$1,$2,$3) RETURNING * ", [16, logradouro, numero]);
+        console.log("enderecoCriado !!!");
         return insere.rows;
     }
     catch (err){
