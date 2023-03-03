@@ -1,9 +1,10 @@
 import produtoService from "../services/produto.service.js";
 
 
-
 async function getAllProdutos(req, res){
-    res.send(await produtoService.getAllProdutos());
+    var produto = await produtoService.getAllProdutos();
+    
+    res.render('telaPrincipalAdmin', { lista : produto, mensagem:''});
 }
 
 async function getProduto(req, res){
@@ -50,17 +51,23 @@ async function deleteProduto(req, res){
 
 async function updateProduto(req, res){
     
-    const id = req.params.id;
+    const nome = req.body.nome;
     const novoNome = req.body.novoNome;
     const descricao = req.body.descricao;
     const preco = req.body.preco;
     const qtd = req.body.qtd;
 
-    if((!id)||(!novoNome)||(!descricao)||(!preco)||(!qtd)){
+    console.log(nome);
+    console.log(novoNome);
+    console.log(descricao);
+    console.log(preco);
+    console.log(qtd);
+
+    if((!nome)||(!novoNome)||(!descricao)||(!preco)||(!qtd)){
         res.send("Nome, descricao, preco ou quantidade inválidos");
     }
     else{
-        res.send(await produtoService.updateProduto(id, novoNome, descricao, preco, qtd));
+        res.send(await produtoService.updateProduto(nome, novoNome, descricao, preco, qtd));
     }
 }
 
