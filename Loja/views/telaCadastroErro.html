@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>NJACK</title>
+        <link rel="stylesheet" href="./telaCadastro.css">
+    </head>
+    <body>
+        <header id="cabecalho">
+            <h1> NJACK </h1>
+            <img id="icone" src="_imagens/mulherCompras.png">
+        </header>
+        <hgroup>
+            <section id="principal">
+                <div class="cadastro_body">
+                    <form action="http://localhost:3000/cliente"  onsubmit="mensagemErro()" method="post">
+                        <h2> Criar Conta </h2>
+                        <div class="input_box">
+                            <input required type="text" id="nome" name="nome" placeholder="Nome de Usuário">
+                        </div>
+                        <div class="input_box">
+                            <input required type="text" id="email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="input_box">
+                            <input required type="password" id="senha" name="senha" placeholder="Senha">
+                        </div>
+                        <button id="botao" type="submit"> Realizar Cadastro </button><br><br><br>
+                    </form>
+                </div>
+
+                <div class="erro">
+                    <p> Usuário já existente </p>
+                </div>
+            </section>
+        </hgroup>
+    </body>
+</html>
