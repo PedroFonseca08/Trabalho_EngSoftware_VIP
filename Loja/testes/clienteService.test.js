@@ -14,7 +14,7 @@ test('Testando remoção de cliente que não foi cadastrado', async() => {
 })
 
 test('Testando remoção de cliente que já foi cadastrado', async() => {
-    let consulta = await clienteService.deleteCliente('Pedro90')
+    let consulta = await clienteService.deleteCliente('sada')
     consulta = consulta[0]
     expect(consulta.nome).toBe('Pedro900')
 })
