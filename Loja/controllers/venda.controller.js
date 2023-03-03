@@ -45,7 +45,9 @@ async function deleteVenda(req, res){
         res.send("Numero de venda inválido");
     }
     else {
-        res.send(await vendaService.deleteVenda(numerovenda));
+        await vendaService.deleteVenda(numerovenda);
+        var venda = await vendaService.getAllVendas();
+        res.render('telaVendas', { lista : venda, mensagem:''})
     }
 }
 
@@ -63,7 +65,9 @@ async function updateVenda(req, res){
         res.send("Nome, descricao, preco ou quantidade inválidos");
     }
     else {
-        res.send(await vendaService.updateVenda(numerovenda, idendereco, novoqtd));
+        await vendaService.updateVenda(numerovenda, idendereco, novoqtd)
+        var venda = await vendaService.getAllVendas();
+        res.render('telaVendas', { lista : venda, mensagem:''})
     }
 }
 
