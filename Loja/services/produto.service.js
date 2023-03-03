@@ -10,8 +10,7 @@ async function getProduto(nome){
 
 async function createProduto(nome, descricao, preco, qtd){
     const produto = await produtoPersistence.createProduto(nome, descricao, preco, qtd);
-    console.log(produto);
-    if(produto.length == 0){
+    if(produto.length > 0){
         return true;
     }
     else{

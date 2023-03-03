@@ -6,7 +6,7 @@ const router = express.Router();
 // Produtos
 router.get("/", produtoController.getAllProdutos);
 router.post("/busca", produtoController.getProduto);
-router.post("/", produtoController.createProduto);
+router.post("/cadastrarProduto", produtoController.createProduto);
 router.get("/:nome", produtoController.deleteProduto);
 router.post("/alterar", produtoController.updateProduto);
 
