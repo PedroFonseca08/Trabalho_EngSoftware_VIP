@@ -64,7 +64,12 @@ header#cabecalho img{
     position: absolute;
 }
 
-.menuOpcoes a#gerenciamento{
+.menuOpcoes a#gerenciamentoVendas{
+    top: 1.5em;
+    left: 65em;   
+}
+
+.menuOpcoes a#gerenciamentoClientes{
     top: 1.5em;
     left: 75em;   
 }
@@ -132,18 +137,12 @@ aside#lateral nav li{
 
 /*SEÇÃO DE PRODUTOS*/
 section#Produtos{
-    padding: 20px 20px;
+    background-color: #769c8152;
+    padding: 10px;
+    margin-left: 600px;
 }
 
-section#Produtos div{
-    margin: 10%;
-    border-radius: 10px;
-    background-color: #215f2488;
-    height: 270px;
-    width: 300px;
-}
-
-.removerProduto input, .alterarProduto input{
+.removerProduto a, .alterarProduto a{
     float: left;
     border-radius: 10px;
     background-color: #ff5a5a;
@@ -152,49 +151,4 @@ section#Produtos div{
     margin-right: auto;
     text-align: center;
     padding: 3px;
-}
-
-.produto img{
-    position: absolute;
-    align-self: center;
-    margin-top: 30%;
-    margin-left: 8%;
-    height: 100px;
-    width: 100px;
-}
-
-section#Produtos div#primeiro{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 20%;
-}
-
-section#Produtos div#segundo{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 45%;
-}
-
-section#Produtos div#terceiro{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 70%;
-}
-
-section#Produtos div#quarto{
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 20%;
-}
-
-section#Produtos div#quinto{
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 45%;
-}
-
-section#Produtos div#sexto{
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 70%;
 }
