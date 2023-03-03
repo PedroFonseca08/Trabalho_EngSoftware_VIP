@@ -1,6 +1,5 @@
 import produtoService from "../services/produto.service.js";
 
-
 async function getAllProdutos(req, res){
     var produto = await produtoService.getAllProdutos();
     
@@ -46,7 +45,9 @@ async function deleteProduto(req, res){
         res.send("Nome inválido!!!");
     }
     else {
-        res.send(await produtoService.deleteProduto(nome));
+        await produtoService.deleteProduto(nome)
+        var produto = await produtoService.getAllProdutos();
+        res.render('telaPrincipalAdmin', { lista : produto, mensagem:''});
     }
 }
 

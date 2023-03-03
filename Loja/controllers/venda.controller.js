@@ -9,13 +9,15 @@ async function getAllVendas(req, res){
 
 async function getVenda(req, res){
 
-    const id = req.params.id;
+    const numerovenda = req.body.numerovenda;
 
-    if(!id){
-        res.send("idcliente de venda inválido!!!");
+    console.log(numerovenda);
+
+    if(!numerovenda){
+        res.send("Numero da venda inválido!!!");
     }
     else{
-        res.send(await vendaService.getVenda(id));
+        res.send(await vendaService.getVenda(numerovenda));
     }
 }
 
