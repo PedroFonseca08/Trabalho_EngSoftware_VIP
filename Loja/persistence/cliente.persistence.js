@@ -41,7 +41,7 @@ async function createCliente(nome, email, senha){
         return insere.rows;
     }
     catch (err){
-        console.log(err);
+        return false;
     }
     finally {
         // Liberar (devolver) a conexão.

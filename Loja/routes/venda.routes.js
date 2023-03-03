@@ -6,9 +6,9 @@ const router = express.Router();
 
 // Vendas
 router.get("/", vendaController.getAllVendas);
-router.get("/:id", vendaController.getVenda);
-router.post("/", vendaController.createVenda);
-router.delete("/", vendaController.deleteVenda);
-router.put("/", vendaController.updateVenda);
+router.post("/busca", vendaController.getVenda);
+router.post("/cadastrarVenda", vendaController.createVenda);
+router.get("/:numerovenda", vendaController.deleteVenda);
+router.post("/alterar", vendaController.updateVenda);
 
 export default router;
