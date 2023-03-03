@@ -10,12 +10,20 @@
                 <h1 id="TOPO"> NJACK </h1>
             </a>
             <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+            <div class="menuOpcoes">
+                <a id="carrinho" href="http://localhost:3000/carrinho.html" title="Acesse seu Carrinho">
+                    <button><img src="_imagens/carrinho.png" height="40px"></button>
+                </a>
+                <a id="meuPerfil" href="http://localhost:3000/telaCadastro.html" title="Acesse seu Perfil">
+                    <button><img src="_imagens/meuPerfil.png" height="40px"></button>
+                </a>
+            </div>
         </header>
 
         <section id="principal">
             <div class="cadastrarProduto_body">
                 <div class="cadastrarProduto_box">
-                    <h2> Cadastrar Produto </h2>
+                    <h2> Editar Produto </h2>
                     <form action="http://localhost:3000/produto" method="post">
                         <div class="input_box">
                             <input required type="text" name="nome" id="nome" placeholder="Nome do Produto:">
@@ -38,7 +46,7 @@
                             <input required type="text" name="preco" id="preco" placeholder="Preço:">
                         </div>
                         <div>
-                            <button type="submit">Cadastrar Produto</button>
+                            <button type="submit">Editar Produto</button>
                         </div>
                     </form>
                 </div>
