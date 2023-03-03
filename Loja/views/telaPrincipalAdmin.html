@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Njack WebSite </title>
+    <link rel="stylesheet" href="./telaPrincipalAdmin.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1 id="TOPO"> NJACK </h1>
+        <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+        <div class="menuOpcoes">
+            </a>
+            <a id="gerenciamentoVendas" href="http://localhost:3000/telaGerenciamentoVendas.html" title="Gerenciar Vendas">
+                <button><img src="_imagens/gestao.png" height="40px"></button>
+            </a>
+            <a id="gerenciamentoClientes" href="http://localhost:3000/telaGerenciamento.html" title="Gerenciar Contas">
+                <button><img src="_imagens/gerenciamento.png" height="40px"></button>
+            </a>
+            <a id="adicionarProduto" href="http://localhost:3000/telaCadastrarProduto.html" title="Adicionar Produto">
+                <button><img src="_imagens/adicionarProduto.png" height="40px"></button>
+            </a>
+        </div>
+        <form action="http://localhost:3000/produto/busca" method="post">
+            <label for="busca"></label>
+            <input type="search" id="busca" name="nome" placeholder="Buscar Produto">
+            <button type="submit" title="Buscar"><img id="busca" src="_imagens/busca.png" height="15px"></button>
+        </form>
+    </header>
+    <aside id="lateral">
+        <h2> Categorias </h2>
+        <nav id="menuLateral">
+            <ul>
+                <li id="Masculino">
+                    <a href secoes="masculino.html"> Seção Masculina </a>
+                </li>
+                <li id="Feminino">
+                    <a href secoes="feminino.html"> Seção Feminina </a>
+                </li>
+                <li id="Infantil">
+                    <a href secoes="infantil.html"> Seção Infantil </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section id="Produtos">
+        <div class="produto" id="primeiro">
+            <form class="removerProduto" action="http://localhost:3000/telaRemoverProdutos.html" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/telaAlterarProdutos.html" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="primeiroProduto">
+        </div>
+        <div class="produto" id="segundo">
+            <form class="removerProduto" action="http://localhost:3000/telaRemoverProdutos.html" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/telaAlterarProdutos.html" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="segundoProduto">
+        </div>
+        <div class="produto" id="terceiro">
+            <form class="removerProduto" action="http://localhost:3000/telaRemoverProdutos.html" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/telaAlterarProdutos.html" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="terceiroProduto">
+        </div>
+        <div class="produto" id="quarto">
+            <form class="removerProduto" action="http://localhost:3000/telaRemoverProdutos.html" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/telaAlterarProdutos.html" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="quartoProduto">
+        </div>
+        <div class="produto" id="quinto">
+            <form class="removerProduto" action="http://localhost:3000/telaRemoverProdutos.html" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/telaAlterarProdutos.html" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="quintoProduto">
+        </div>
+        <div class="produto" id="sexto">
+            <form class="removerProduto" action="http://localhost:3000/telaRemoverProduto.html" method="DELETE">
+                <input type="submit" id="botao" value="X">
+            </form>
+            <form class="alterarProduto" action="http://localhost:3000/telaAlterarProduto.html" method="PUT">
+                <input type="submit" id="botao" value="E">
+            </form>
+            <img src="" alt="sextoProduto">
+        </div>
+    </section>
+</body>
+</html>
