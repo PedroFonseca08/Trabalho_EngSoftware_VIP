@@ -18,9 +18,9 @@ async function deleteVenda(numerovenda){
     return await vendaPersistence.deleteVenda(numerovenda);
 }
 
-async function updateVenda(idcliente, novoidproduto, idendereco, data, novoqtd, idproduto){
+async function updateVenda(numerovenda, idendereco, novoqtd){
 
-    return await await vendaPersistence.updateVenda(idcliente, novoidproduto, idendereco, data, novoqtd, idproduto);
+    return await await vendaPersistence.updateVenda(numerovenda, idendereco, novoqtd);
 }
 
 export default{getAllVendas, getVenda, createVenda, updateVenda, deleteVenda}

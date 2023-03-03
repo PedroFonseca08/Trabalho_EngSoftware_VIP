@@ -35,7 +35,7 @@ async function createCliente(req, res){
             res.redirect("/telaPrincipal.html");
         }
         else {
-            res.send("Não foi possível realizar cadastro");
+            res.redirect("/telaCadastroErro.html");
         }
     }
 }

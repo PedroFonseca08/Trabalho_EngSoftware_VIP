@@ -23,18 +23,20 @@
         <div class="alterarVenda_body">
             <div class="alterarVenda_box">
                 <h2> Alterar Venda </h2>
-                <form action="http://localhost:3000/venda" method="put">
+                <form action="http://localhost:3000/venda/alterar" method="post">
+
                     <div class="input_box">
-                        <input required type="text" name="endereco" id="endereco" placeholder="Endereço:">
+                        <input required type="text" name="numerovenda" id="numerovenda" placeholder="Número da venda:">
                     </div>
 
                     <div class="input_box">
-                        <input required type="text" name="qtd" id="qtd" placeholder="Quantidade de Produtos:">
+                        <input required type="text" name="idendereco" id="idendereco" placeholder="Novo Endereço:">
                     </div>
 
                     <div class="input_box">
-                        <input required type="text" name="total" id="total" placeholder="Total:">
+                        <input required type="text" name="novoqtd" id="novoqtd" placeholder="Nova Quantidade de Produtos:">
                     </div>
+
                     <div>
                         <button type="submit">Alterar Venda</button>
                     </div>

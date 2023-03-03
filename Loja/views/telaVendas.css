@@ -1,0 +1,151 @@
+
+/*CABEÇALHO*/
+header#cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 25px 10px;
+    flex-wrap: wrap;
+    background-color: rgba(7, 94, 7, 0.93);
+    width: 100%;
+    height: 100%;
+}
+
+header h1{
+    position: absolute;
+    align-self: center;
+    margin-left: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(41, 41, 41);
+}
+
+header#cabecalho form{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: 40%;
+    border-radius: 100px;
+    text-transform: none;
+    padding: 8px 15px 8px 19px;
+    background: rgba(0,0,0,0.46);
+    margin-right: 30%;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 3px;
+}
+
+input, button{
+    border-radius: 40px;
+    background-color: #d0ffdd;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #63aa77;; /* Green */
+}
+
+header#cabecalho img{
+    padding: 4px, 4px;
+}
+
+.menuOpcoes a{  
+    align-self: center; 
+    text-decoration: none;
+    position: absolute;
+}
+
+.menuOpcoes a#gerenciamentoVendas{
+    top: 1.5em;
+    left: 65em;   
+}
+
+.menuOpcoes a#gerenciamentoClientes{
+    top: 1.5em;
+    left: 75em;   
+}
+
+.menuOpcoes a#adicionarProduto{
+    top: 1.5em;
+    left: 70em;   
+}
+
+header#cabecalho img#mulherCompras{
+    position:absolute;
+    align-self: center;
+    margin-left: 11%;
+}
+
+/*FUNDO*/
+body{
+    background-image: url(_imagens/fundo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*LATERAL*/
+aside#lateral h2{
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(7, 94, 7, 0.30);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(41, 41, 41);
+    text-align: center;
+    padding: 10px 0px;
+}
+
+aside#lateral{  
+    display: block;
+    height: 100vh;
+    width: 18%;
+    float: left;
+    background-color: rgba(91, 233, 91, 0.6);
+    box-sizing: border-box;
+    border-right: 1px solid rgba(7, 94, 7, 0.93);
+    border-left: 1px solid rgba(7, 94, 7, 0.93);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside#lateral nav li{
+    border-top: 2px solid #000000;
+    background-color: rgba(7, 94, 7, 0.30);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15;
+    font-weight: bold;
+    padding: 1em 0.2em 1em 0.2em;
+    text-align: center;
+}
+
+/*SEÇÃO DE PRODUTOS*/
+section#Vendas{
+    background-color: #769c8152;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 350px;
+}
+
+.removerProduto a, .alterarProduto a{
+    float: left;
+    border-radius: 10px;
+    background-color: #ff5a5a;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 3px;
+}
