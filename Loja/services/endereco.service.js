@@ -4,9 +4,9 @@ async function getAllEndereco(idcliente){
     return await enderecoPersistence.getAllEndereco(idcliente);
 }
 
-async function createEndereco(idcliente, logradouro, numero){
+async function createEndereco(login, logradouro, numero){
 
-    return await enderecoPersistence.createEndereco(idcliente, logradouro, numero);
+    return await enderecoPersistence.createEndereco(login, logradouro, numero);
 
 }
 

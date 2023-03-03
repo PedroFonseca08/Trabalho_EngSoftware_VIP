@@ -14,15 +14,16 @@ async function getAllEndereco(req, res){
 
 async function createEndereco(req, res){
 
-    const id = req.params.id;
+    const login = req.body.login;
     const logradouro = req.body.logradouro;
     const numero = req.body.numero;
 
-    if((!id)||(!logradouro)||(!numero)) {
+    if((!login)||(!logradouro)||(!numero)) {
         res.send("Nome, email ou senha inválidos")
     }
     else {
-        res.send(await enderecoService.createEndereco(id, logradouro, numero));
+        await enderecoService.createEndereco(login, logradouro, numero);
+        res.redirect("/telaPrincipal.html");
     }
 }
 
