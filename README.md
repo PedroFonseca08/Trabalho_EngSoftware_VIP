@@ -39,7 +39,7 @@ O site terá por objetivo mostrar os diversos produtos da loja, assim como verif
 *Funcionalidade opcionais:*
 
 - O sistema deve ser capaz de cadastrar endereços
-- O sistema deve ser capaz de remover endereços
+- O sistema deve ser capaz de cadastrar produtos no carrinho
 - O sistema deve ser capaz de cadastrar clientes
 - O sistema deve ser capaz de remover clientes
 
