@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Njack WebSite </title>
+    <link rel="stylesheet" href="./telaPrincipalAdmin.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1 id="TOPO"> NJACK </h1>
+        <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+        <div class="menuOpcoes">
+            </a>
+            <a id="gerenciamentoVendas" href="http://localhost:3000/telaGerenciamentoVendas.html" title="Gerenciar Vendas">
+                <button><img src="_imagens/gestao.png" height="40px"></button>
+            </a>
+            <a id="gerenciamentoClientes" href="http://localhost:3000/telaGerenciamento.html" title="Gerenciar Contas">
+                <button><img src="_imagens/gerenciamento.png" height="40px"></button>
+            </a>
+            <a id="adicionarProduto" href="http://localhost:3000/telaCadastrarProduto.html" title="Adicionar Produto">
+                <button><img src="_imagens/adicionarProduto.png" height="40px"></button>
+            </a>
+        </div>
+        <form action="http://localhost:3000/produto/busca" method="post">
+            <label for="busca"></label>
+            <input type="search" id="busca" name="nome" placeholder="Buscar Produto">
+            <button type="submit" title="Buscar"><img id="busca" src="_imagens/busca.png" height="15px"></button>
+        </form>
+    </header>
+    <section id="Vendas">
+        <p>
+            <h1> Lista de Vendas: </h1>
+            <% lista.forEach((venda) => { %>
+                <tr>
+                  <td> Número da venda: <%= venda.numerovenda %> <br></td>
+                  <td> Id do produto: <%= venda.idproduto %> <br></td>
+                  <td> Id do cliente: <%= venda.idcliente %> <br></td>
+                  <td> Id do endereço: <%= venda.idendereco %> <br></td>
+                  <td> Quantidade de produtos: <%= venda.qtd %> <br></td>
+                  <td> Data: <%= venda.data %> <br></td>                  
+                  <td>
+                    <a href="http://localhost:3000/telaAlterarVenda.html">Alterar Venda</a>
+                  </td>
+                  <td>
+                    <a href="http://localhost:3000/produto/<%=venda.numerovenda%>">Deletar Venda</a><br><br>
+                  </td>
+                </tr>
+            <% }); %>
+        </p>
+    </section>
+</body>
+</html>
