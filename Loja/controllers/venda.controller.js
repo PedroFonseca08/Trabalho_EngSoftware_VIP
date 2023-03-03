@@ -3,7 +3,8 @@ import vendaService from "../services/venda.service.js";
 
 
 async function getAllVendas(req, res){
-    res.send(await vendaService.getAllVendas());
+    var venda = await vendaService.getAllVendas();
+    res.render('telaVendas', { lista : venda, mensagem:''})
 }
 
 async function getVenda(req, res){
@@ -36,7 +37,7 @@ async function createVenda(req, res){
 
 async function deleteVenda(req, res){
     
-    const numerovenda = req.body.numerovenda;
+    const numerovenda = req.params.numerovenda;
 
     if(!numerovenda) {
         res.send("Numero de venda inválido");
@@ -48,18 +49,19 @@ async function deleteVenda(req, res){
 
 async function updateVenda(req, res){
     
-    const idcliente = req.body.idcliente;
-    const novoidproduto = req.body.novoidproduto;
     const idendereco = req.body.idendereco;
-    const data = req.body.data;
     const novoqtd = req.body.novoqtd;
-    const idproduto = req.body.idproduto;
+    const numerovenda = req.body.numerovenda;
 
-    if((!idcliente)||(!novoidproduto)||(!idendereco)||(!data)||(!novoqtd)||(!idproduto)) {
+    console.log(idendereco);
+    console.log(novoqtd);
+    console.log(numerovenda);
+
+    if((!idendereco)||(!novoqtd)||(!numerovenda)) {
         res.send("Nome, descricao, preco ou quantidade inválidos");
     }
     else {
-        res.send(await vendaService.updateVenda(idcliente, novoidproduto, idendereco, data, novoqtd, idproduto));
+        res.send(await vendaService.updateVenda(numerovenda, idendereco, novoqtd));
     }
 }
 

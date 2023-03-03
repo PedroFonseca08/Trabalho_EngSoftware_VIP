@@ -67,12 +67,12 @@ async function deleteVenda(numerovenda){
     }
 }
 
-async function updateVenda(idcliente, novoidproduto, idendereco, data, novoqtd, idproduto){
+async function updateVenda(numerovenda, idendereco, novoqtd){
     
     const conn = await BD.conectar();
 
     try {
-        const update = await conn.query("UPDATE venda SET idproduto=$1, qtd=$2 WHERE idcliente=$3 AND idproduto=$4 AND idendereco=$5 AND data=$6 RETURNING *", [novoidproduto, novoqtd, idcliente, idproduto, idendereco, data]);
+        const update = await conn.query("UPDATE venda SET idendereco=$1, qtd=$2 WHERE numerovenda=$3 RETURNING *", [idendereco, novoqtd, numerovenda]);
         console.log("updateVenda");
         return update.rows;
     }
