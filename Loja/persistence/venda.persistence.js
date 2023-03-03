@@ -17,11 +17,11 @@ async function getAllVendas(){
     }
 }
 
-async function getVenda(idcliente){
+async function getVenda(numerovenda){
 
     const conn = await BD.conectar();
     try {
-        const consulta = await conn.query("SELECT * FROM venda WHERE idcliente=$1", [idcliente]);
+        const consulta = await conn.query("SELECT * FROM venda WHERE numerovenda=$1", [numerovenda]);
         console.log("getVenda !!! \n" + consulta.rows);
         return consulta.rows;
     }

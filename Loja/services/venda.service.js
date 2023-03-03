@@ -4,8 +4,8 @@ async function getAllVendas(){
     return await vendaPersistence.getAllVendas();
 }
 
-async function getVenda(idcliente){
-    return await vendaPersistence.getVenda(idcliente);
+async function getVenda(numerovenda){
+    return await vendaPersistence.getVenda(numerovenda);
 }
 
 async function createVenda(idcliente, idproduto, idendereco, data, qtd){
