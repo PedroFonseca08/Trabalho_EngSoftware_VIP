@@ -64,7 +64,12 @@ header#cabecalho img{
     position: absolute;
 }
 
-.menuOpcoes a#gerenciamento{
+.menuOpcoes a#gerenciamentoVendas{
+    top: 1.5em;
+    left: 65em;   
+}
+
+.menuOpcoes a#gerenciamentoClientes{
     top: 1.5em;
     left: 75em;   
 }
