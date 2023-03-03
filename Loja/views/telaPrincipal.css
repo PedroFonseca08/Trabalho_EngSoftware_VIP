@@ -138,7 +138,9 @@ aside#lateral nav li{
 
 /*SEÇÃO DE PRODUTOS*/
 section#Produtos{
-    padding: 20px 20px;
+    background-color: #769c8152;
+    padding: 10px;
+    margin-left: 500px;
 }
 
 section#Produtos div{
@@ -156,40 +158,4 @@ section#Produtos div{
     margin-left: 28%;
     height: 100px;
     width: 100px;
-}
-
-section#Produtos div#primeiro{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 20%;
-}
-
-section#Produtos div#segundo{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 45%;
-}
-
-section#Produtos div#terceiro{
-    position: absolute;
-    margin-top: 2%;
-    margin-left: 70%;
-}
-
-section#Produtos div#quarto{
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 20%;
-}
-
-section#Produtos div#quinto{
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 45%;
-}
-
-section#Produtos div#sexto{
-    position: absolute;
-    margin-top: 25%;
-    margin-left: 70%;
 }

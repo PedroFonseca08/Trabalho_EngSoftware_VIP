@@ -5,6 +5,7 @@ const router = express.Router();
 
 // Produtos
 router.get("/", produtoController.getAllProdutos);
+router.get("/cliente", produtoController.getAllProdutosCliente);
 router.post("/busca", produtoController.getProduto);
 router.post("/cadastrarProduto", produtoController.createProduto);
 router.get("/:nome", produtoController.deleteProduto);

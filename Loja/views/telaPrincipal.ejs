@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Njack WebSite </title>
+    <link rel="stylesheet" href="./telaPrincipal.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1 id="TOPO"> NJACK </h1>
+        <img id="mulherCompras" src="_imagens/mulherCompras.png" height="40px">
+        <div class="menuOpcoes">
+            <a id="carrinho" href="http://localhost:3000/carrinho.html" title="Acesse seu Carrinho">
+                <button><img src="_imagens/carrinho.png" height="40px"></button>
+            </a>
+            <a id="meuPerfil" href="http://localhost:3000/telaCadastroEndereco.html" title="Cadastrar endereço">
+                <button><img src="_imagens/endereco.png" height="40px"></button>
+            </a>
+        </div>
+        <form action="http://localhost:3000/produto/busca" method="post">
+            <label for="busca"></label>
+            <input type="search" id="busca" name="nome" placeholder="Buscar Produto">
+            <button type="submit" title="Buscar"><img id="busca" src="_imagens/busca.png" height="15px"></button>
+        </form>
+    </header>
+    <aside id="lateral">
+        <h2> Categorias </h2>
+        <nav id="menuLateral">
+            <ul>
+                <li id="Masculino">
+                    <a href secoes="masculino.html"> Seção Masculina </a>
+                </li>
+                <li id="Feminino">
+                    <a href secoes="feminino.html"> Seção Feminina </a>
+                </li>
+                <li id="Infantil">
+                    <a href secoes="infantil.html"> Seção Infantil </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section id="Produtos">
+        <p>
+            <h1> Lista de Produtos: </h1>
+            <% lista.forEach((produto) => { %>
+                <tr>
+                  <td> Nome: <%= produto.nome %> <br></td>
+                  <td> Descricao: <%= produto.descricao %> <br></td>
+                  <td> Quantidade: <%= produto.qtd %> <br></td>
+                  <td> Preco: <%= produto.preco %> <br></td>
+                  <td class="alterarProduto">
+                    <a href="http://localhost:3000/carrinho/alterar">Adicionar no Carrinho</a>
+                  </td>
+                </tr>
+            <% }); %>
+        </p>
+    </section>
+</body>
+</html>

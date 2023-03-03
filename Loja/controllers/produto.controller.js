@@ -6,6 +6,12 @@ async function getAllProdutos(req, res){
     res.render('telaPrincipalAdmin', { lista : produto, mensagem:''});
 }
 
+async function getAllProdutosCliente(req, res){
+    var produto = await produtoService.getAllProdutos();
+    
+    res.render('telaPrincipal', { lista : produto, mensagem:''});
+}
+
 async function getProduto(req, res){
 
     const nome = req.body.nome;
@@ -75,4 +81,4 @@ async function updateProduto(req, res){
     }
 }
 
-export default{getAllProdutos, getProduto, createProduto, updateProduto, deleteProduto}
+export default{getAllProdutos, getAllProdutosCliente, getProduto, createProduto, updateProduto, deleteProduto}
