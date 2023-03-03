@@ -22,6 +22,9 @@ servidor.use(express.json())
 servidor.use(express.urlencoded({extended: true}))
 servidor.use(express.static('views'))
 
+servidor.use('/produto', express.static(path.join(__dirname, 'views')))
+servidor.use('/venda', express.static(path.join(__dirname, 'views')))
+
 servidor.use("/cliente", clienteRouter)
 servidor.use("/produto", produtoRouter)
 servidor.use("/carrinho", carrinhoRouter)
@@ -30,7 +33,7 @@ servidor.use("/venda", vendaRouter);
 servidor.use("/interface", interfacesRouter);
 
 servidor.get("/", function(req,res) {
-    res.sendFile(path.join(__dirname, "/views/TelaLogin.html"))
+    res.sendFile(path.join(__dirname, "/views/telaLogin.html"))
 })
 
 
