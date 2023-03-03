@@ -30,9 +30,10 @@ async function createProduto(req, res){
         res.redirect("/telaCadastrarProduto.html");
     }
     else {
-        cadastrar = await produtoService.createProduto(nome, descricao, preco, qtd);
+        const cadastrar = await produtoService.createProduto(nome, descricao, qtd, preco);
         if(cadastrar){
-            res.redirect("/telaCadastrarProduto.html");
+            var produto = await produtoService.getAllProdutos();
+            res.render('telaPrincipalAdmin', { lista : produto, mensagem:''});
         }
     }
 } 
@@ -67,7 +68,9 @@ async function updateProduto(req, res){
         res.send("Nome, descricao, preco ou quantidade inválidos");
     }
     else{
-        res.send(await produtoService.updateProduto(nome, novoNome, descricao, preco, qtd));
+        await produtoService.updateProduto(nome, novoNome, descricao, preco, qtd);
+        var produto = await produtoService.getAllProdutos();
+        res.render('telaPrincipalAdmin', { lista : produto, mensagem:''});
     }
 }
 
