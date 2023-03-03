@@ -27,6 +27,7 @@ async function getProduto(nome){
             primeiraPalavra += nome[i];
             i++;
         }
+        console.log(nome);
         const consulta = await conn.query("SELECT * FROM produto WHERE nome LIKE $1", ['%'+primeiraPalavra+'%']);
         console.log("getProduto !!! \n" + consulta.rows);
         return consulta.rows;
@@ -73,12 +74,12 @@ async function deleteProduto(nome){
     }
 }
 
-async function updateProduto(id, novoNome, descricao, preco, qtd){
+async function updateProduto(nome, novoNome, descricao, preco, qtd){
     
     const conn = await BD.conectar();
 
     try {
-        const update = await conn.query("UPDATE produto SET nome = $2, descricao = $3, preco = $4, qtd = $5 WHERE idProduto=$1 RETURNING *", [id, novoNome, descricao, preco, qtd]);
+        const update = await conn.query("UPDATE produto SET nome = $2, descricao = $3, preco = $4, qtd = $5 WHERE nome=$1 RETURNING *", [nome, novoNome, descricao, preco, qtd]);
         console.log("updateProduto");
         return update.rows;
     }
